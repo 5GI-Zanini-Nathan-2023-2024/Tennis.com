@@ -1,6 +1,8 @@
 html, body {
   height: 100%;
   background-color: #333;
+  max-width: 100vw;
+  scroll-behavior: smooth;
 }
   
 div#welcomeDiv {
@@ -15,22 +17,65 @@ div#welcomeDiv img {
   object-fit: cover;     
 }
 
-div#welcomeDiv::after {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
+div#welcomeDiv h1 {
+  font-size: 100px;
+  top: 3%;
 }
 
-h5 {
+div#welcomeDiv p {
+  font-size: 30px;
+  top: 15%;
+}
+
+div#welcomeDiv button {
+  width: 20%;
+  height: 5%;
+  position: absolute;
+  bottom: 13%;
+  left: 40%;
+  color: #333;
+  background-color: #fff;
+  border-radius: 10px;
+  z-index: 5;
+}
+
+div#welcomeDiv h1, p {
   color: #fff;
   position: absolute;
-  bottom: 20px;
   left: 0;
   right: 0;
-  margin:auto;
-  text-align:center;
-  z-index:10;
-  font-size: 40px;
+  margin: auto;
+  text-align: center;
+  z-index: 5;
+}
+
+img#tennisBallButton {
+  width: 17.5%;
+  height: 35%;
+  position: absolute;
+  left: 43%;
+  bottom: -2%;
+}
+
+@keyframes spin {
+
+  from {
+    transform:rotate(0deg);
+  }
+
+  to {
+    transform:rotate(360deg);
+  }
+}
+
+img#tennisBallButton:hover {
+  cursor: pointer;
+  animation-name: spin;
+  animation-duration: 5000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear; 
+}
+
+article {
+  height: 2000px;
 }
