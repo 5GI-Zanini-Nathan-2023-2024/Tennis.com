@@ -1,15 +1,17 @@
+/* Stile degli elementi "html" e "body": */
 html, body {
   height: 100%;
   background-color: #333;
-  max-width: 100vw;
   scroll-behavior: smooth;
 }
-  
+
+/* Stile della sezione introduttiva della pagina "index.html": */
 div#welcomeDiv {
   width: 400px;
   height: 500px;  
 }
 
+/* Stile dell'immagine utilizzata nella sezione introduttiva della pagina "index.html: "*/
 div#welcomeDiv img {
   position: absolute;
   width: 100%;
@@ -18,25 +20,13 @@ div#welcomeDiv img {
 }
 
 div#welcomeDiv h1 {
-  font-size: 100px;
-  top: 3%;
+  font-size: 120px;
+  top: 2%;
 }
 
 div#welcomeDiv p {
   font-size: 30px;
-  top: 15%;
-}
-
-div#welcomeDiv button {
-  width: 20%;
-  height: 5%;
-  position: absolute;
-  bottom: 13%;
-  left: 40%;
-  color: #333;
-  background-color: #fff;
-  border-radius: 10px;
-  z-index: 5;
+  top: 17%;
 }
 
 div#welcomeDiv h1, p {
@@ -49,14 +39,66 @@ div#welcomeDiv h1, p {
   z-index: 5;
 }
 
+div[class$="Arrow"] {
+  display: inline-block;
+  position: relative;
+  margin-top: 290px;
+  width: 200px;
+}
+
+div.leftArrow div.line {
+  margin-left: 100px;
+  margin-bottom: 10px;
+}
+
+div.rightArrow div.line {
+  margin-right: -1530px;
+  margin-top: -50px;
+}
+
+div[class$="Arrow"] div.line {
+  width: 600px;
+  background: #00ccff;
+  height: 50px;
+}
+
+div.leftArrow .line, div.rightArrow.point {
+  float: left;
+}
+
+div.rightArrow .line, div.leftArrow.line {
+  float: right;
+}
+
+div[class$="Arrow"] .point {
+  position: relative;
+  display: inline-block;
+  margin-left: 700px;
+  margin-top: -75px;
+  border-top: 50px solid transparent;
+  border-bottom: 50px solid transparent;
+}
+
+div.leftArrow .point {
+  border-left: 80px solid #00ccff;
+  margin-top: -180px;
+  margin-bottom: 3px;
+}
+
+div.rightArrow .point {
+  border-right: 80px solid #00ccff;
+  margin-left: 1050px;
+}
+
 img#tennisBallButton {
   width: 17.5%;
   height: 35%;
   position: absolute;
-  left: 43%;
+  left: 42%;
   bottom: -2%;
 }
 
+/* Animazione associata alla pallina da tennis nella sezione introduttiva della pagina "index.html": */
 @keyframes spin {
 
   from {
@@ -68,14 +110,59 @@ img#tennisBallButton {
   }
 }
 
+/* Stile della pallina da tennis quando il cursore è posizionato sopra di essa: */
 img#tennisBallButton:hover {
   cursor: pointer;
   animation-name: spin;
-  animation-duration: 5000ms;
+  animation-duration: 2000ms;
   animation-iteration-count: infinite;
   animation-timing-function: linear; 
 }
 
-article {
-  height: 2000px;
+br.largeBr {
+  margin-top: 150%;
+}
+
+h1, h2 {
+  text-align: center;
+}
+
+div.presentationDiv {
+  width: 100%;
+  height: 1000px;
+}
+
+div.presentationDiv h2 {
+  font-size: 50px;
+  padding-top: 1%;
+}
+
+h2.whiteHeading {
+  color: #fff;
+}
+
+h2.blackHeading {
+  color: #000;
+}
+
+img.presentationImage {
+  display: inline;
+  float: right;
+  margin-right: 2%;
+}
+
+/* Stile della sezione "footer" della pagina: */
+footer {
+  text-align: center;
+  background-color: #fff;
+  height: 150px;
+}
+
+footer p {
+  font-size: 30px;
+  color: #000;
+}
+
+footer a {
+  font-size: 30px;
 }
