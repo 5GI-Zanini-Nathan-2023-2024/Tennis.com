@@ -4,13 +4,24 @@
 
     <head>
         <title>Tennis.com</title>
-        <link rel = "icon" type = "image/x-icon" href = "/Icons/General/tennisBall.ico"> 
+        <link rel = "icon" type = "image/x-icon" href = "/Icons/General/favicon.ico"> 
         <link href = "https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel = "stylesheet">
         <link href = "style.css" rel = "stylesheet">
         <script src = "javascript.js"> </script>
     </head>
 
     <body>
+
+        <nav>
+            <ul data-spy = "scrollspy" data-target = "#navbar-nav" id="navbar-nav">
+                <li><a id = "linkSezioneStoria" href = "#tennisHistoryPresentationDiv" onclick = "indexScroll(0, 910)">Storia</a></li>
+                <li><a id = "linkSezioneRegole" href = "#tennisRulesPresentationDiv" onclick = "indexScroll(0, 3900)">Regole</a></li>
+                <li><a id = "linkSezioneMiglioriGiocatori" href = "#bestTennisPlayerPresentationDiv" onclick = "indexScroll(0, 6900)">Migliori giocatori</a></li>
+                <li><a id = "linkSezioneCuriosità" href = "#curiositiesPresentationDiv" onclick = "indexScroll(0, 11900)">Curiosità</a></li>
+                <li><a id = "linkSezioneNotizie" href = "#newsPresentationDiv" onclick = "indexScroll(0, 12900)">Notizie</a></li>
+                <li><a id = "linkSezioneNegozioOnline" href = "#onlineShopPresentationDiv" onclick = "indexScroll(0, 13900)">Negozio online</a></li>
+            </ul>
+        </nav>
 
         <div id = "welcomeDiv">
 
@@ -31,13 +42,13 @@
             <div class = "point"></div>
         </div>
 
-        <img id = "tennisBallButton" src = "Images/Backgrounds/tennisBall.png" onclick = "indexScroll()" width = "100px" height = "100px">
+        <img id = "tennisBallButton" src = "Images/Backgrounds/tennisBall.png" onclick = "indexScroll(0, 910)" width = "100px" height = "100px">
 
         <br> <br> <br> <br> <br>
 
         <article>
 
-            <div class = "presentationDiv" id = "tennisHistoryPresentationDiv" style = "background-color: #000">
+            <div class = "presentationDiv" id = "historyPresentationDiv" style = "background-color: #000">
 
                 <h2 class = "whiteHeading">Gli eventi fondamentali nella storia del tennis:</h2>
 
@@ -139,7 +150,7 @@
 
             </div>
 
-            <div class = "presentationDiv" id = "tennisRulesPresentationDiv" style = "background-color: #ffff00">
+            <div class = "presentationDiv" id = "rulesPresentationDiv" style = "background-color: #ffff00">
 
                 <h2>Impara le regole!</h2>
 
@@ -153,19 +164,19 @@
 
                     <div class = "cards">
                         <br>
-                        <img src = "Icons/General/singleMatch.ico">
+                        <img src = "Icons/Modes/singleMatch.ico">
                         <br>
                         <h3>Singolo</h3>
                     </div>
 
                     <div>
-                        <img src = "Icons/General/serve.ico" width = "400" height = "400" style = "position: relative; margin-left: -65px">
+                        <img src = "Icons/Modes/serve.ico" width = "400" height = "400" style = "position: relative; margin-left: -100px">
                     </div>
 
 
                     <div class = "cards">
                         <br>
-                        <img src = "Icons/General/doubleMatch.ico">
+                        <img src = "Icons/Modes/doubleMatch.ico">
                         <br> <br>
                         <h3>Doppio</h3>
                     </div>
@@ -182,21 +193,19 @@
 
                     <div class = "cards">
                         <br>
-                        <img id = "tennisCourtIcon" src = "Icons/General/courtLength.ico"/>
+                        <img id = "tennisCourtIcon" src = "Icons/Court Dimensions/courtLength.ico"/>
                         <br> <br>
                         <h3>Lunghezza: 23,77 metri</h3>
                              
                     </div>
 
                     <div>
-                        <img src = "Icons/General/tennisCourt.ico" width = "360" height = "400">
+                        <img src = "Icons/Court Dimensions/court.ico" width = "360" height = "400">
                     </div>
             
                     <div class = "cards">     
-                        <img src = "Icons/General/courtWidth.ico"/>
-                        <h3>Larghezza:</h3>
-                        Singolo: 8,23 metri <br>
-                        Doppio: 10,97 metri
+                        <img src = "Icons/Court Dimensions/courtWidth.ico"/>
+                        <h3>Larghezza: <br><br> Singolo: 8,23 metri <br> Doppio: 10,97 metri</h3>
                     </div>
 
                 </div>
@@ -210,17 +219,48 @@
                 <div class = "flexboxContainer">
 
                     <div class = "cards">
-                        <img src = "Icons/General/middle.ico">
+                        <img src = "Icons/Net/middle.ico">
                         <h3> Altezza al centro: 0,914 metri</h3>
                     </div>
 
                     <div>
-                        <img id = "tennisNetIcon" src = "Icons/General/net.ico" width = "400" height = "350">
+                        <img id = "tennisNetIcon" src = "Icons/Net/net.ico" width = "400" height = "300">
                     </div>
 
                     <div class = "cards">
-                        <img src = "Icons/General/sides.ico">
+                        <img src = "Icons/Net/sides.ico">
                         <h3> Altezza ai lati: 1,07 metri</h3>
+                    </div>
+
+                </div>
+
+                <br> <br> <br> <br>
+
+                <h3>Le caratteristiche della pallina</h3>
+
+                <br>
+
+                <div class = "flexboxContainer">
+
+                    <div class = "cards">
+                        <br>
+                        <img src = "Icons/Ball/diameter.ico">
+                        <br> <br>
+                        <h3>Diametro: 6,54 - 6,86 metri</h3>
+                    </div>
+
+                    <div class = "cards">
+                        <br>
+                        <img src = "Icons/Ball/ball.ico">
+                        <br> <br>
+                        <h3>Materiale: Gomma e feltro</h3>
+                    </div>
+
+                    <div class = "cards">
+                        <br>
+                        <img src = "Icons/Ball/weight.ico">
+                        <br> <br>
+                        <h3>Peso: 56 - 59,4 grammi</h3>
                     </div>
 
                 </div>
@@ -234,20 +274,23 @@
                 <div class = "flexboxContainer">
 
                     <div class = "cards">
-                        <img src = "Icons/Court Types/clayCourt.ico">
                         <br>
+                        <img src = "Icons/Court Types/clayCourt.ico">
+                        <br> <br>
                         <h3>Terra battuta</h3>
                     </div>
 
                     <div class = "cards">
-                        <img src = "Icons/Court Types/grassCourt.ico">
                         <br>
+                        <img src = "Icons/Court Types/grassCourt.ico">
+                        <br> <br>
                         <h3>Erba (naturale o sintetica)</h3>
                     </div>
 
                     <div class = "cards">
-                        <img src = "Icons/Court Types/hardCourt.ico">
                         <br>
+                        <img src = "Icons/Court Types/hardCourt.ico">
+                        <br> <br>
                         <h3>Cemento</h3>
                     </div>
 
@@ -255,7 +298,7 @@
                 
             </div>
 
-            <div class = "presentationDiv" id = "bestTennisPlayersPresentationDiv" style = "background-color: #6699ff">
+            <div class = "presentationDiv" id = "bestPlayersPresentationDiv" style = "background-color: #6699ff">
 
                 <h2>Conosci i migliori giocatori!</h2>
 
@@ -293,25 +336,277 @@
             
             </div>
 
-            <div class = "presentationDiv" id = "tennisCuriositiesPresentationDiv" style = "background-color: #ff0000">
+            <div class = "presentationDiv" id = "curiositiesPresentationDiv" style = "background-color: #ff0000">
 
                 <h2>Scopri alcune curiosità!</h2>
 
-                <img>
+                <br>
+
+                <div class = "flexboxContainer">
+
+                    <div class = "flip-card">
+
+                        <div class = "flip-card-inner">
+
+                            <div class = "flip-card-front">
+                                <img src = "Icons/General/palm.ico" style = "width: 300px; height: 300px">
+                            </div>
+
+                            <div class = "flip-card-back">
+                                <h1>Il nome iniziale del tennis:</h1> 
+                                <p>
+                                Si crede che le origini del tennis risalgano addirittura al 12° secolo in Francia, dove questo sport era inizialmente giocato
+                                con le mani. Non a caso, esso era originariamente chiamato "jeu de paume," che significa "gioco di palmo."
+                                </p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class = "flip-card">
+
+                        <div class = "flip-card-inner">
+
+                            <div class = "flip-card-front">
+                                <img src = "Icons/General/france.ico" style = "width: 300px; height: 300px">
+                            </div>
+
+                            <div class = "flip-card-back">
+                                <h1>L'origine della parola "tennis":</h1>
+                                <p>
+                                Si crede che la parola "tennis" derivi dal francese "tenez", che significa "prendere" o "ricevere": questa parola, infatti, era
+                                solitamente gridata dai giocatori prima di lanciare la palla in campo.
+                                </p> 
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class = "flip-card">
+
+                        <div class = "flip-card-inner">
+
+                            <div class = "flip-card-front">
+                                <img src = "Icons/General/chronometer.ico" style = "width: 300px; height: 300px">
+                            </div>
+
+                            <div class = "flip-card-back">
+                                <h1>La partita più lunga:</h1> 
+                                <p>
+                                La partita più lunga nella storia del tennis è stata giocata a Wimbledon, in Inghilterra, nel 2010 tra
+                                John Isner e Nicolas Mahut; è durata più di 11 ore e ha avuto luogo in tre giorni.
+                                </p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class = "flip-card">
+
+                        <div class = "flip-card-inner">
+
+                            <div class = "flip-card-front">
+                                <img src = "Icons/General/rocket.ico" style = "width: 300px; height: 300px">
+                            </div>
+
+                            <div class = "flip-card-back">
+                                <h1>La battuta più veloce:</h1> 
+                                <p>
+                                La battuta più veloce mai registrata nei match singoli maschili ha raggiunto la velocità di 163.7 mph (263.4 km/h) ed è
+                                stata realizzata da Samuel Groth in Australia nel 2012.
+                                </p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class = "break"></div>
+                    <br> <br>
+
+                    <div class = "flip-card">
+
+                        <div class = "flip-card-inner">
+
+                            <div class = "flip-card-front">
+                                <img src = "Icons/General/trophy.ico" style = "width: 300px; height: 300px">
+                            </div>
+
+                            <div class = "flip-card-back">
+                                <h1>"Grande Slam":</h1> 
+                                <p>
+                                L'espressione "Grande Slam", derivata dal gioco di carte "bridge", indica la vittoria, da parte di un
+                                tennista, dei 4 tornei principali in un solo anno: Australian Open, Roland Garros, Wimbledon e US Open.
+                                </p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class = "flip-card">
+
+                        <div class = "flip-card-inner">
+
+                            <div class = "flip-card-front">
+                                <img src = "Icons/General/hawkeye.ico" style = "width: 300px; height: 300px">
+                            </div>
+
+                            <div class = "flip-card-back">
+                                <h1>La tecnologia di replay istantaneo:</h1> 
+                                <p>
+                                Il tennis è stato uno dei primi sport ad adottare l'utilizzo della tecnologia di replay istantaneo 
+                                (denominata "Hawkeye") per rivedere e controllare i colpi dubbi al limite del campo.
+                                </p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class = "flip-card">
+
+                        <div class = "flip-card-inner">
+
+                            <div class = "flip-card-front">
+                                <img src = "Icons/General/tennisBall.ico" style = "width: 300px; height: 300px">
+                            </div>
+
+                            <div class = "flip-card-back">
+                                <h1>Il colore delle palline:</h1> 
+                                <p>
+                                Le palline da tennis erano originariamente bianche, ma dal 1972 sono diventate gialle per renderle maggiormente visibili dai
+                                giocatori in campo e sulla televisione a colori.
+                                </p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class = "flip-card">
+
+                        <div class = "flip-card-inner">
+
+                            <div class = "flip-card-front">
+                                <img src = "Icons/General/sweat.ico" style = "width: 300px; height: 300px">
+                            </div>
+
+                            <div class = "flip-card-back">
+                                <h1>Il punto più lungo della storia:</h1>
+                                <p>
+                                Lo scambio più lungo mai registrato in un match professionale di tennis è durato ben 29 minuti e 31
+                                secondi, durante una partita disputata nel 1984 tra Vicky Nelson-Dunbar e Jean Hepner.
+                                </p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class = "break"></div>
+                    <br> <br>
+
+                    <div class = "flip-card">
+
+                        <div class = "flip-card-inner">
+
+                            <div class = "flip-card-front">
+                                <img src = "Icons/General/leather.ico" style = "width: 300px; height: 300px">
+                            </div>
+
+                            <div class = "flip-card-back">
+                                <h1>Il materiale delle palline:</h1>
+                                <p>
+                                Le palline da tennis erano originariamente fatte di legno massello o pelle e sono state sostituite solo gradualmente dalle
+                                palline di gomma e feltro a cui siamo abituati al giorno d'oggi.
+                                </p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class = "flip-card">
+
+                        <div class = "flip-card-inner">
+    
+                            <div class = "flip-card-front">
+                                <img src = "Icons/General/graphene.ico" style = "width: 300px; height: 300px">
+                            </div>
+    
+                            <div class = "flip-card-back">
+                                <h1>Il materiale delle racchette:</h1> 
+                                <p>
+                                Le racchette da tennis erano inizialmente fatte di legno, ma alla fine degli anni '60 sono stati introdotti metallo e
+                                nuovi materiali compositi; al giorno d'oggi, esse sono solitamente realizzate con materiali leggeri come grafite e fibra di
+                                carbonio.
+                                </p>
+                            </div>
+    
+                        </div>
+
+                    </div>
+
+                    <div class = "flip-card">
+
+                        <div class = "flip-card-inner">
+        
+                            <div class = "flip-card-front">
+                                <img src = "Icons/General/grunt.ico" style = "width: 300px; height: 300px">
+                            </div>
+        
+                            <div class = "flip-card-back">
+                                <h1>Il "grugnito":</h1> 
+                                <p>
+                                Il suono emesso dai tennisti nel momento in cui colpiscono la pallina viene comunemente chiamato "grugnito". Alcuni giocatori
+                                credono che grugnire aiuti a generare più potenza, mentre altri affermano che si tratta di un suono naturale causato dallo sforzo
+                                fisico.
+                                </p>
+                            </div>
+        
+                        </div>
+
+                    </div>
+
+                    <div class = "flip-card">
+
+                        <div class = "flip-card-inner">
+
+                            <div class = "flip-card-front">
+                                <img src = "Icons/General/audience.ico" style = "width: 300px; height: 300px">
+                            </div>
+
+                            <div class = "flip-card-back">
+                                <h1>Il match con più spettatori:</h1> 
+                                <p>
+                                Il match che ha registrato il maggior numero di spettatori è stato giocato nel 2010, quando 35,681 persone hanno
+                                assistito ad un match di esibizione tra Serena Williams e Kim Clijsters al King Baudouin Stadium a Bruxelles, in Belgio.
+                                </p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
                 
             </div>
 
-            <div class = "presentationDiv" id = "tennisShopPresentationDiv" style = "background-color: #ff9900">
+            <div class = "presentationDiv" id = "newsPresentationDiv" style = "background-color: #cc00cc">
 
-                <h2>Acquista i nostri articoli sportivi!</h2>
+                <h2>Rimani aggiornato con le ultime notizie!</h2>
 
                 <img>
 
             </div>
 
-            <div class = "presentationDiv" id = "tennisNewsPresentationDiv" style = "background-color: #cc00cc">
+            <div class = "presentationDiv" id = "onlineShopPresentationDiv" style = "background-color: #ff9900">
 
-                <h2>Rimani aggiornato con le ultime notizie!</h2>
+                <h2>Acquista i nostri articoli sportivi!</h2>
 
                 <img>
 

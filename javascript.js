@@ -2,6 +2,6 @@ function indexPageLoading () {
     
 }
 
-function indexScroll () {
-    window.scroll(0, 970);
+function indexScroll (x, y) {
+    window.scroll(x, y);
 }
