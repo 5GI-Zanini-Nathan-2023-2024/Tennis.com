@@ -6,21 +6,24 @@
         <title>Tennis.com</title>
         <link rel = "icon" type = "image/x-icon" href = "/Icons/General/favicon.ico"> 
         <link href = "https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel = "stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
         <link href = "style.css" rel = "stylesheet">
         <script src = "javascript.js"> </script>
     </head>
 
-    <body>
+    <body data-spy = "scroll" data-target = "#navbar">
 
-        <nav>
-            <ul data-spy = "scrollspy" data-target = "#navbar-nav" id="navbar-nav">
-                <li><a id = "linkSezioneStoria" href = "#tennisHistoryPresentationDiv" onclick = "indexScroll(0, 910)">Storia</a></li>
-                <li><a id = "linkSezioneRegole" href = "#tennisRulesPresentationDiv" onclick = "indexScroll(0, 3900)">Regole</a></li>
-                <li><a id = "linkSezioneMiglioriGiocatori" href = "#bestTennisPlayerPresentationDiv" onclick = "indexScroll(0, 6900)">Migliori giocatori</a></li>
-                <li><a id = "linkSezioneCuriosità" href = "#curiositiesPresentationDiv" onclick = "indexScroll(0, 11900)">Curiosità</a></li>
-                <li><a id = "linkSezioneNotizie" href = "#newsPresentationDiv" onclick = "indexScroll(0, 12900)">Notizie</a></li>
-                <li><a id = "linkSezioneNegozioOnline" href = "#onlineShopPresentationDiv" onclick = "indexScroll(0, 13900)">Negozio online</a></li>
+        <nav id = "navbar" class = "navbar-inverse navbar-fixed-top">
+            <ul class = "nav">
+                <li><a id = "linkSezioneStoria" href = "#historyPresentationDiv">Storia</a></li>
+                <li><a id = "linkSezioneRegole" href = "#rulesPresentationDiv">Regole</a></li>
+                <li><a id = "linkSezioneNotizie" href = "#shotsExplanationDiv">Tecnica</a></li>
+                <li><a id = "linkSezioneMiglioriGiocatori" href = "#bestPlayersPresentationDiv">Migliori giocatori</a></li>
+                <li><a id = "linkSezioneCuriosità" href = "#curiositiesPresentationDiv">Curiosità</a></li>
+                <li><a id = "linkSezioneNegozioOnline" href = "#onlineShopPresentationDiv">Negozio online</a></li>
             </ul>
+            <a href = "./login.php"> <img src = "Icons/General/user.ico" id = "userIcon"></a>
         </nav>
 
         <div id = "welcomeDiv">
@@ -56,7 +59,7 @@
 
                 <div class = "timeline">
 
-                    <div class = "container left">
+                    <div class = "container left reveal">
 
                         <div class = "content">
                             <p>1874: In Gran Bretagna viene fondato il primo club di tennis della storia, il Leamington Lawn Tennis Club.</p>
@@ -66,37 +69,37 @@
 
                     </div>
 
-                    <div class = "container right">
+                    <div class = "container right reveal">
 
                         <div class = "content">
                             <p>1877: In Inghliterra viene istituito il torneo di Wimbledon.</p>
                             <br>
-                            <img src = "Images/Backgrounds/wimbledonTournament.png" width = "270" height = "250">
+                            <img src = "Images/Logos/wimbledonTournament.png" width = "270" height = "250">
                         </div>
 
                     </div>
 
-                    <div class = "container left">
+                    <div class = "container left reveal">
 
                         <div class = "content">
                             <p>1881: Negli Stati Uniti viene istituito il torneo "US Open".</p>
                             <br> <br>
-                            <img src = "Images/Backgrounds/usOpenTournament.png" width = "350" height = "200">
+                            <img src = "Images/Logos/usOpenTournament.png" width = "350" height = "200">
                         </div>
 
                     </div>
 
-                    <div class = "container right">
+                    <div class = "container right reveal">
 
                         <div class = "content">
                             <p>1891: In Francia viene istituito il torneo "Roland Garros".</p>
                             <br> <br>
-                            <img src = "Images/Backgrounds/rolandGarrosTournament.png" width = "250" height = "220">
+                            <img src = "Images/Logos/rolandGarrosTournament.png" width = "250" height = "220">
                         </div>
 
                     </div>
 
-                    <div class = "container left">
+                    <div class = "container left reveal">
 
                         <div class = "content">
                             <p>1895: Si svolge il primo campionato italiano per tennisti.</p>
@@ -106,42 +109,42 @@
 
                     </div>
 
-                    <div class = "container right">
+                    <div class = "container right reveal">
 
                         <div class = "content">
                             <p>1900: Nasce la Coppa Davis.</p>
                             <br>
-                            <img src = "Images/Backgrounds/davisCup.png" width = "500" height = "250" style = "margin-left: -40px">
+                            <img src = "Images/Logos/davisCup.png" width = "500" height = "250" style = "margin-left: -40px">
                         </div>
 
                     </div>
 
-                    <div class = "container left">
+                    <div class = "container left reveal">
 
                         <div class = "content">
                             <p>1905: In Australia viene istituito il torneo "Australian Open".</p>
                             <br> <br>
-                            <img src = "Images/Backgrounds/australianOpen.png" width = "250" height = "220">
+                            <img src = "Images/Logos/australianOpen.png" width = "250" height = "220">
                         </div>
 
                     </div>
 
-                    <div class = "container right">
+                    <div class = "container right reveal">
 
                         <div class = "content">
                             <p>1913: Nasce la ITF (Federazione Internazionale Tennis).</p>
                             <br> <br>
-                            <img src = "Images/Backgrounds/itf.png" width = "350" height = "200">
+                            <img src = "Images/Logos/itf.png" width = "350" height = "200">
                         </div>
 
                     </div>
 
-                    <div class = "container left">
+                    <div class = "container left reveal">
 
                         <div class = "content">
                             <p>1988: In occasione dei Giochi di Seoul il tennis diventa ufficialmente uno sport olimpico.</p>
                             <br> <br>
-                            <img src = "Images/Backgrounds/seoulOlympics.png" width = "320" height = "230">
+                            <img src = "Images/Logos/seoulOlympics.png" width = "320" height = "230">
                         </div>
 
                     </div>
@@ -156,181 +159,843 @@
 
                 <br> <br>
 
-                <h3> Le modalità di gioco:</h3>
+                <section>
 
-                <br>
+                    <div class = "reveal">
 
-                <div class = "flexboxContainer">
+                        <h3> Le modalità di gioco:</h3>
 
-                    <div class = "cards">
                         <br>
-                        <img src = "Icons/Modes/singleMatch.ico">
-                        <br>
-                        <h3>Singolo</h3>
+
+                        <div class = "flexboxContainer">
+
+                            <div class = "cards">
+                                <br>
+                                <img src = "Icons/Modes/singleMatch.ico">
+                                <br>
+                                <h3>Singolo</h3>
+                            </div>
+
+                            <div>
+                                <img src = "Icons/Modes/vs.ico" width = "400" height = "400">
+                            </div>
+
+                            <div class = "cards">
+                                <br>
+                                <img src = "Icons/Modes/doubleMatch.ico">
+                                <br> <br>
+                                <h3>Doppio</h3>
+                            </div>
+
+                        </div>
+
                     </div>
 
-                    <div>
-                        <img src = "Icons/Modes/serve.ico" width = "400" height = "400" style = "position: relative; margin-left: -100px">
-                    </div>
-
-
-                    <div class = "cards">
-                        <br>
-                        <img src = "Icons/Modes/doubleMatch.ico">
-                        <br> <br>
-                        <h3>Doppio</h3>
-                    </div>
-
-                </div>
+                </section>
 
                 <br> <br> <br> <br>
 
-                <h3> Le dimensioni del campo di gioco:</h3>
+                <section>
 
-                <br>
+                    <div class = "reveal">
 
-                <div class = "flexboxContainer">
+                        <h3> Le dimensioni del campo di gioco:</h3>
 
-                    <div class = "cards">
                         <br>
-                        <img id = "tennisCourtIcon" src = "Icons/Court Dimensions/courtLength.ico"/>
-                        <br> <br>
-                        <h3>Lunghezza: 23,77 metri</h3>
-                             
+
+                        <div class = "flexboxContainer">
+
+                            <div class = "cards">
+                                <br>
+                                <img id = "tennisCourtIcon" src = "Icons/Court Dimensions/courtLength.ico"/>
+                                <br> <br>
+                                <h3>Lunghezza: 23,77 metri</h3>
+                                    
+                            </div>
+
+                            <div>
+                                <img src = "Icons/Court Dimensions/court.ico" width = "360" height = "400">
+                            </div>
+                    
+                            <div class = "cards">     
+                                <img src = "Icons/Court Dimensions/courtWidth.ico"/>
+                                <h3>Larghezza: <br><br> Singolo: 8,23 metri <br> Doppio: 10,97 metri</h3>
+                            </div>
+
+                        </div>
+
                     </div>
 
-                    <div>
-                        <img src = "Icons/Court Dimensions/court.ico" width = "360" height = "400">
-                    </div>
-            
-                    <div class = "cards">     
-                        <img src = "Icons/Court Dimensions/courtWidth.ico"/>
-                        <h3>Larghezza: <br><br> Singolo: 8,23 metri <br> Doppio: 10,97 metri</h3>
-                    </div>
-
-                </div>
+                </section>
 
                 <br> <br> <br> <br>
 
-                <h3> Le dimensioni della rete:</h3>
+                <section>
 
-                <br>
+                    <div class = "reveal">
 
-                <div class = "flexboxContainer">
+                        <h3> Le dimensioni della rete:</h3>
 
-                    <div class = "cards">
-                        <img src = "Icons/Net/middle.ico">
-                        <h3> Altezza al centro: 0,914 metri</h3>
+                        <br>
+
+                        <div class = "flexboxContainer">
+
+                            <div class = "cards">
+                                <img src = "Icons/Net/middle.ico">
+                                <h3> Altezza al centro: 0,914 metri</h3>
+                            </div>
+
+                            <div>
+                                <img id = "tennisNetIcon" src = "Icons/Net/net.ico" width = "400" height = "300">
+                            </div>
+
+                            <div class = "cards">
+                                <img src = "Icons/Net/sides.ico">
+                                <h3> Altezza ai lati: 1,07 metri</h3>
+                            </div>
+
+                        </div>
+
                     </div>
 
-                    <div>
-                        <img id = "tennisNetIcon" src = "Icons/Net/net.ico" width = "400" height = "300">
-                    </div>
-
-                    <div class = "cards">
-                        <img src = "Icons/Net/sides.ico">
-                        <h3> Altezza ai lati: 1,07 metri</h3>
-                    </div>
-
-                </div>
+                </section>
 
                 <br> <br> <br> <br>
 
-                <h3>Le caratteristiche della pallina</h3>
+                <section>
 
-                <br>
+                    <div class = "reveal">
 
-                <div class = "flexboxContainer">
+                        <h3>Le caratteristiche della pallina:</h3>
 
-                    <div class = "cards">
                         <br>
-                        <img src = "Icons/Ball/diameter.ico">
-                        <br> <br>
-                        <h3>Diametro: 6,54 - 6,86 metri</h3>
+
+                        <div class = "flexboxContainer">
+
+                            <div class = "cards">
+                                <br>
+                                <img src = "Icons/Ball/diameter.ico">
+                                <br> <br>
+                                <h3>Diametro: 6,54 - 6,86 metri</h3>
+                            </div>
+
+                            <div class = "cards">
+                                <br>
+                                <img src = "Icons/Ball/ball.ico">
+                                <br> <br>
+                                <h3>Materiale: Gomma e feltro</h3>
+                            </div>
+
+                            <div class = "cards">
+                                <br>
+                                <img src = "Icons/Ball/weight.ico">
+                                <br> <br>
+                                <h3>Peso: 56 - 59,4 grammi</h3>
+                            </div>
+
+                        </div>
+
                     </div>
 
-                    <div class = "cards">
-                        <br>
-                        <img src = "Icons/Ball/ball.ico">
-                        <br> <br>
-                        <h3>Materiale: Gomma e feltro</h3>
-                    </div>
-
-                    <div class = "cards">
-                        <br>
-                        <img src = "Icons/Ball/weight.ico">
-                        <br> <br>
-                        <h3>Peso: 56 - 59,4 grammi</h3>
-                    </div>
-
-                </div>
+                </section>
 
                 <br> <br> <br> <br>
 
-                <h3>I diversi terreni di gioco:</h3>
+                <section>
 
-                <br>
+                    <div class = "reveal">
 
-                <div class = "flexboxContainer">
+                        <h3>I diversi terreni di gioco:</h3>
 
-                    <div class = "cards">
                         <br>
-                        <img src = "Icons/Court Types/clayCourt.ico">
-                        <br> <br>
-                        <h3>Terra battuta</h3>
+
+                        <div class = "flexboxContainer">
+
+                            <div class = "cards">
+                                <br>
+                                <img src = "Icons/Court Types/clayCourt.ico">
+                                <br> <br>
+                                <h3>Terra battuta</h3>
+                            </div>
+
+                            <div class = "cards">
+                                <br>
+                                <img src = "Icons/Court Types/grassCourt.ico">
+                                <br> <br>
+                                <h3>Erba (naturale o sintetica)</h3>
+                            </div>
+
+                            <div class = "cards">
+                                <br>
+                                <img src = "Icons/Court Types/hardCourt.ico">
+                                <br> <br>
+                                <h3>Cemento</h3>
+                            </div>
+
+                        </div>
+
                     </div>
 
-                    <div class = "cards">
+                </section>
+
+                <br> <br> <br> <br>
+
+                <section>
+
+                    <div class = "reveal">
+
+                        <h3>Lo scopo del gioco:</h3>
+
                         <br>
-                        <img src = "Icons/Court Types/grassCourt.ico">
-                        <br> <br>
-                        <h3>Erba (naturale o sintetica)</h3>
+
+                        <div class = "flexboxContainer">
+
+                            <div class = "cards">
+                                <br>
+                                <img src = "Icons/Aim/goal.ico">
+                                <br>
+                                <h5>Colpire la pallina con la racchetta mandandola nella metà campo avversaria e cercando di segnare un punto, ovvero
+                                facendo in modo che il giocatore non riesca a ribatterla a sua volta dopo il primo rimbalzo o che commetta un fallo.</h5>
+                            </div>
+                        </div>
+
                     </div>
 
-                    <div class = "cards">
+                </section>
+
+                <br> <br> <br> <br>
+
+                <section>
+
+                    <div class = "reveal">
+
+                        <h3>L'inizio della partita:</h3>
+
                         <br>
-                        <img src = "Icons/Court Types/hardCourt.ico">
-                        <br> <br>
-                        <h3>Cemento</h3>
+
+                        <div class = "flexboxContainer">
+
+                            <div class = "cards">
+                                <br>
+                                <img src = "Icons/Start/coin.ico">
+                                <br> <br>
+                                <h5>
+                                Lancio della moneta: L'arbitro lancia una moneta per determinare il giocatore a cui verrà concessa la possibilità di scegliere il
+                                proprio campo e se iniziare in battuta o in ricezione. Tale giocatore, tuttavia, può anche decidere di lasciare la scelta all'avversario.
+                                </h5>
+                            </div>
+
+                            <div class = "cards">
+                                <br>
+                                <img src = "Icons/Start/warm-up.ico">
+                                <br> <br>
+                                <h5>
+                                Riscaldamento: Dopo aver stabilito le modalità di inizio della partita, entrambi i giocatori hanno a disposizione 5 minuti al massimo per
+                                riscaldarsi. Subito dopo questo breve periodo di tempo la partita ha inizio con la battuta del giocatore stabilito.
+                                </h5>
+                            </div>
+
+                        </div>
+
                     </div>
 
-                </div>
+                </section>
+
+                <br> <br> <br> <br>
+
+                <section>
+
+                    <div class = "reveal">
+
+                        <h3>Il servizio:</h3>
+
+                        <br>
+
+                        <div class = "flexboxContainer">
+
+                            <div class = "cards">
+                                <br>
+                                <img src = "Icons/Serve/serve.ico" style = "position: relative; margin-left: -80px">
+                                <br> <br>
+                                <h5>
+                                Durante l'esecuzione del servizio, l giocatore che si trova in battuta non deve né camminare né correre: deve partire da una
+                                posizione stazionaria, ma gli è comunque consentito saltare per aumentare la potenza e le probabilità di successo.
+                                </h5>
+                            </div>
+
+                            <div class = "cards">
+                                <br>
+                                <img src = "Icons/Serve/line.ico">
+                                <br> <br>
+                                <h5>
+                                Prima di colpire la pallina, il giocatore in battuta non deve, con uno o entrambi i piedi, nè superare la linea di fondocampo nè
+                                toccare il prolungamento immaginario delle linee laterali o quello del segno centrale. Inoltre, non deve nemmeno superare la linea
+                                di fondocampo.
+                                </h5>
+                            </div>
+
+                            <div class = "cards">
+                                <br>
+                                <img src = "Icons/Serve/overTheNet.ico">
+                                <br> <br>
+                                <h5>
+                                Affinché il servizio vada a buon fine e possa dare avvio allo scambio, la pallina deve superare la rete e poi
+                                rimbalzare nel campo di battuta (delimitato in larghezza dalla linea orizzontale più vicina alla rete) opposto,
+                                diagonalmente alla posizione da cui si batte.
+                                </h5>
+                            </div>
+
+                            <div class = "cards">
+                                <br>
+                                <img src = "Icons/Serve/closeCall.ico">
+                                <br> <br>
+                                <h5>
+                                Secondo il regolamento, come qualsiasi altro colpo anche il servizio viene considerato valido anche se la pallina
+                                tocca in parte le linee che definiscono il campo (di battuta, nel caso del servizio) opposto, purché non le superi
+                                interamente.
+                                </h5>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+                <br> <br> <br> <br>
+
+                <section>
+
+                    <div class = "reveal">
+
+                        <h3>Falli, infrazioni e situazioni particolari:</h3>
+
+                    </div>
+
+                    <br>
                 
+                    <div class = "reveal">
+
+                        <div class = "flexboxContainer">
+
+                            <div class = "cards">
+                                <br>
+                                <img src = "Icons/Fouls/running.ico">
+                                <br> <br>
+                                <h5>Il giocatore che si trova in battuta cammina o corre mentre effettua il servizio, anzichè partire da una posizione
+                                stazionaria (come precedentemente specificato, il salto è invece consentito).
+                                </h5>
+                            </div>
+
+                            <div class = "cards">
+                                <br>
+                                <img src = "Icons/Fouls/footstep.ico">
+                                <br> <br>
+                                <h5>
+                                Il giocatore che si trova in battuta supera con uno o entrambi i piedi la linea di fondocampo o tocca con essi il prolungamento
+                                immaginario delle linee laterali, o quello del segno centrale.
+                                </h5>
+                            </div>
+
+                            <div class = "cards">
+                                <br>
+                                <img src = "Icons/Fouls/out.ico">
+                                <br> <br>
+                                <h5>
+                                Dopo il servizio la palla rimbalza al di fuori del campo di battuta previsto (il rettangolo diagonale alla posizione di battuta e
+                                delimitato in larghezza dalla linea orizzontale più vicina alla rete).
+                                </h5>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+                <br> <br>
+
+                <section>
+
+                    <div class = "reveal">
+
+                        <div class = "flexboxContainer">
+
+                            <div class = "cards">
+                                <br>
+                                <img src = "Icons/Fouls/serving.ico">
+                                <br> <br>
+                                <h5>
+                                Il giocatore che si trova in battuta manca la pallina durante il servizio.
+                                </h5>
+                            </div>
+
+                            <div class = "cards">
+                                <br>
+                                <img src = "Icons/Fouls/let.ico">
+                                <br> <br>
+                                <h5>
+                                Durante la battuta la palla colpisce la rete prima di cadere nel campo avversario.
+                                </h5>
+                            </div>
+
+                                <div class = "cards">
+                                    <br>
+                                    <img src = "Icons/Fouls/fail.ico">
+                                    <br> <br>
+                                    <h5>
+                                    Il giocatore (in battuta o non) non riesce a mandare la palla al di sopra della rete.
+                                    </h5>
+                                </div>
+
+                            <div class = "cards">
+                                <br>
+                                <img src = "Icons/Fouls/playerHit.ico">
+                                <br> <br>
+                                <h5>
+                                Il giocatore colpisce il suo compagno durante le partite di doppio.
+                                </h5>
+                            </div>
+
+                        </div>
+                    
+                    </div>
+
+                </section>
+
+                <br> <br>
+
+                <section>
+
+                    <div class = "reveal">
+
+                        <div class = "flexboxContainer">
+
+                            <div class = "cards">
+                                <br>
+                                <img src = "Icons/Fouls/invasion.ico">
+                                <br> <br>
+                                <h5>
+                                Il giocatore invade il campo avversario toccandolo con una parte del corpo e/o con la propria racchetta.
+                                </h5>
+                            </div>
+
+                            <div class = "cards">
+                                <br>
+                                <img src = "Icons/Fouls/netTouch.ico">
+                                <br> <br>
+                                <h5>
+                                Il giocatore tocca la rete divisoria con una parte del corpo e/o con la propria racchetta.
+                                </h5>
+                            </div>
+
+                            <div class = "cards">
+                                <br>
+                                <img src = "Icons/Fouls/netLine.ico">
+                                <br> <br>
+                                <h5>
+                                Il giocatore colpisce la palla prima che essa abbia oltrepassato la linea immaginaria della rete.
+                                </h5>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+                <br> <br>
+
+                <section>
+
+                    <div class = "reveal">
+
+                        <div class = "flexboxContainer">
+
+                            <div class = "cards">
+                                <br>
+                                <img src = "Icons/Fouls/racket.ico">
+                                <br> <br>
+                                <h5>
+                                La pallina rimbalza due o più volte sulla racchetta del giocatore.
+                                </h5>
+                            </div>
+
+                            <div class = "cards">
+                                <br>
+                                <img src = "Icons/Fouls/hand.ico">
+                                <br> <br>
+                                <h5>
+                                Il giocatore colpisce la pallina con una parte del corpo o strumenti alternativi.
+                                </h5>
+                            </div>
+
+                            <div class = "cards">
+                                <br>
+                                <img src = "Icons/Fouls/distraction.ico">
+                                <br> <br>
+                                <h5>
+                                Gli spettatori e/o l'avversario disturbano il giocatore durante la battuta.
+                                </h5>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+                <br> <br> <br> <br>
+
+                <section>
+
+                    <div class = "reveal">
+
+                        <h3>Ripetizione della battuta:</h3>
+
+                        <br>
+
+                    </div>
+
+                    <div class = "reveal">
+
+                        <div class = "flexboxContainer">
+
+                            <div class = "cards">
+                                <br>
+                                <img src = "Icons/Retry/retry.ico">
+                                <br> <br>
+                                <h5>
+                                In caso di un normale fallo di servizio durante il primo tentativo, il giocatore ha diritto a ripetere la battuta un'altra volta.
+                                Tuttavia, se anche il secondo tentativo non andrà a buon fine, il punto verrà assegnato all'avversario.
+                                </h5>
+                            </div>
+
+                            <div class = "cards">
+                                <br>
+                                <img src = "Icons/Retry/secondRetry.ico">
+                                <br> <br>
+                                <h5>
+                                In caso di "colpo nullo", o "let" (ovvero quando in servizio la pallina colpisce la rete prima di cadere nel campo opposto oppure il
+                                battitore viene disturbato), il giocatore può ripetere la battuta, anche se si tratta già del secondo tentativo.
+                                </h5>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+                <br> <br> <br> <br>
+
+                <section>
+
+                    <div class = "reveal">
+
+                        <h3>Come si ottiene un punto:</h3>
+
+                        <br>
+
+                    </div>
+
+                    <div class = "reveal">
+
+                        <div class = "flexboxContainer">
+
+                            <div class = "cards">
+                                <br>
+                                <img src = "Icons/Scoring/ace.ico">
+                                <br> <br>
+                                <h5>
+                                Ace: Il giocatore mette a segno una battuta talmente forte e/o ben eseguita da non lasciare scampo all'avversario, che non riesce
+                                a rimandarla nel campo opposto.
+                                </h5>
+                            </div>
+
+                            <div class = "cards">
+                                <br>
+                                <img src = "Icons/Scoring/doubleBounce.ico">
+                                <br> <br>
+                                <h5>
+                                Doppio rimbalzo: La pallina rimbalza per due volte consecutive nel campo dell'avversario prima che quest'ultimo riesca a prenderla
+                                per rimandarla nel campo opposto.
+                                </h5>
+                            </div>
+
+                            <div class = "cards">
+                                <br>
+                                <img src = "Icons/Scoring/foul.ico">
+                                <br> <br>
+                                <h5>
+                                Infrazione/Fallo: Il giocatore avversario commette un'infrazione o un fallo tra quelli precedentemente elencati, avvenga
+                                ciò durante l'esecuzione della battuta oppure durante la risposta.
+                                </h5>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+                <br> <br> <br> <br>
+
+                <section>
+
+                    <div class = "reveal">
+                        <h3>Il sistema di punteggio:</h3>
+                    </div>
+
+                    <br>
+
+                    <div class = "reveal">
+
+                        <div class = "flexboxContainer">
+
+                            <div class = "cards">
+                                <br>
+                                <img src = "Icons/Score/15.ico">
+                                <br> <br>
+                                <h5>Il punteggio assegnato ad un giocatore che ha messo a segno 1 punto.</h5>
+                            </div>
+
+                            <div class = "cards">
+                                <br>
+                                <img src = "Icons/Score/30.ico">
+                                <br> <br>
+                                <h5>Il punteggio assegnato ad un giocatore che ha messo a segno 2 punti.</h5>
+                            </div>
+
+                            <div class = "cards">
+                                <br>
+                                <img src = "Icons/Score/40.ico">
+                                <br> <br>
+                                <h5>Il punteggio assegnato ad un giocatore che ha messo a segno 3 punti.</h5>
+                            </div>
+
+                        </div>
+                        
+                    </div>
+
+                </section>
+
+                <br> <br>
+
+                <section>
+
+                    <div class = "reveal">
+
+                        <div class = "flexboxContainer">
+
+                            <div class = "cards">
+                                <br>
+                                <img src = "Icons/Score/winGame.ico">
+                                <br> <br>
+                                <h5>Il giocatore si aggiudica un "game" (o "gioco", in italiano) quando guadagna 4 punti (15-30-40-vittoria del gioco).</h5>
+                            </div>
+
+                            <div class = "cards">
+                                <br>
+                                <img src = "Icons/Score/pointsTie.ico">
+                                <br> <br>
+                                <h5>In caso di parità di punti (40-40: "deuce"), si aggiudica il gioco il giocatore in grado di mettere a segno 2 punti
+                                consecutivi.
+                                </h5>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+                <br> <br>
+
+                <section>
+
+                    <div class = "reveal">
+
+                        <div class = "flexboxContainer">
+
+                            <div class = "cards">
+                                <br>
+                                <img src = "Icons/Score/winSet.ico">
+                                <br> <br>
+                                <h5>
+                                Il giocatore si aggiudica la vittoria di un "set" (o "partita", in italiano) quando vince almeno 6 giochi con almeno 2 giochi di differenza
+                                (6-0, 6-1, 6-2, 6-3,<br> 6-4, 7-5).
+                                </h5>
+                            </div>
+
+                            <div class = "cards">
+                                <br>
+                                <img src = "Icons/Score/gamesTie.ico">
+                                <br> <br>
+                                <h5>
+                                In alcuni tornei in caso di parità di giochi vinti (6-6), la partita prosegue ad oltranza fino a quando uno dei due giocatori non
+                                riesce ad ottenere un vantaggio di 2 giochi sull'altro.
+                                </h5>
+                            </div>
+
+                            <div class = "cards">
+                                <br>
+                                <img src = "Icons/Score/tieBreak.ico">
+                                <br> <br>
+                                <h5>
+                                In altri tornei, invece, in caso di parità di giochi vinti (tradizionalmente 6-6, ma il numero può essere maggiore e varia a
+                                seconda del torneo), viene disputato il "tie-break", un gioco decisivo la cui vittoria determina la vittoria del set.
+                                </h5>
+                            </div>
+
+                            <div class = "cards">
+                                <br>
+                                <img src = "Icons/Score/7.ico">
+                                <br> <br>
+                                <h5>
+                                In caso di "tie-break", i punti non vengono più contati secondo la successione 15-30-40-vittoria gioco, bensì dall'1 al 7: il
+                                gioco decisivo viene vinto dal giocatore che guadagna almeno 7 punti (possibilità di andare ad oltranza) con un distacco di 2
+                                dall'avversario.
+                                </h5>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+                <br> <br>
+
+                <section>
+
+                    <div class = "reveal">
+
+                        <div class = "flexboxContainer">
+
+                            <div class = "cards">
+                                <br>
+                                <img src = "Images/Logos/australianOpen.png" width = "300" height = "256">
+                                <br> <br>
+                                <h5>
+                                Nel famoso torneo "Australian Open" (Melbourne, Australia), giocato su un duro terreno sintetico, c'è un tie-break ai 10 giochi
+                                (9-9) anziché ai tradizionali 7 giochi (6-6).
+                                </h5>
+                            </div>
+
+                            <div class = "cards">
+                                <br>
+                                <img src = "Images/Logos/rolandGarrosTournament.png" width = "256" height = "256">
+                                <br> <br>
+                                <h5>
+                                Nel famoso torneo "Roland Garros" (Parigi, Francia), giocato su un terreno di terra battuta, in caso di parità di giochi (6-6) si va ad
+                                oltranza finché non ci sono due giochi di differenza.
+                                </h5>
+                            </div>
+
+                            <div class = "cards">
+                                <br>
+                                <img src = "Images/Logos/wimbledonTournament.png" width = "256" height = "256">
+                                <br> <br>
+                                <h5>
+                                Nel famoso torneo di Wimbledon (Wimbledon, Inghilterra), giocato su un terreno erboso, il tie-break del 5° set (ultimo) viene
+                                giocato ai 13 giochi (12-12) anzichè ai tradizionali 7 giochi (6-6).
+                                </h5>
+                            </div>
+
+                            <div class = "cards">
+                                <br>
+                                <img src = "Images/Logos/usOpenTournament.png" width = "360" height = "256">
+                                <br> <br>
+                                <h5>
+                                Nel famoso torneo "US Open" (New York, USA), giocato sul cemento, c'è un tie break-tradizionale: in caso di
+                                parità di giochi (6-6) viene disputato un gioco decisivo che assegna la vittoria per 7-6.
+                                </h5>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+                <br> <br>
+
+                <section>
+
+                    <div class = "reveal">
+
+                        <div class = "flexboxContainer">
+
+                            <div class = "cards">
+                                <br>
+                                <img src = "Icons/Score/3.ico">
+                                <br> <br>
+                                <h5>
+                                In alcuni tornei la vittoria finale di un incontro viene decisa al meglio dei 3 set. Poichè il numero è dispari, non è possibile
+                                che si verifichino situazioni di pareggio di set tra i giocatori.
+                                </h5>
+                            </div>
+
+                            <div class = "cards">
+                                <br>
+                                <img src = "Icons/Score/5.ico">
+                                <br> <br>
+                                <h5>
+                                In altri tornei, invece, la vittoria finale di un incontro viene decisa al meglio dei 5 set. Anche in questo caso, poichè il
+                                numero è dispari non è possibile che si verifichino situazioni di pareggio di set.
+                                </h5>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+            </div>
+
+            <div class = "presentationDiv" id = "shotsExplanationDiv" style = "background-color: #cc00cc">
+
+                <h2>Impara a giocare!</h2>
+
+                <img>
+
             </div>
 
             <div class = "presentationDiv" id = "bestPlayersPresentationDiv" style = "background-color: #6699ff">
 
                 <h2>Conosci i migliori giocatori!</h2>
 
-                <div class = "playerPresentationDiv" id = "novakDjokovicPresentationDiv">
+                <div class = "playerPresentationDiv reveal" id = "novakDjokovicPresentationDiv">
                     <img src = "Images/Players/novakDjokovic.png">
                 </div>
 
-                <div class = "playerPresentationDiv" id = "carlosAlcarazPresentationDiv">
+                <div class = "playerPresentationDiv reveal" id = "carlosAlcarazPresentationDiv">
                     <img src = "Images/Players/carlosAlcaraz.png">
                 </div>
             
-                <div class = "playerPresentationDiv" id = "daniilMedvedevPresentationDiv">
+                <div class = "playerPresentationDiv reveal" id = "daniilMedvedevPresentationDiv">
                     <img src = "Images/Players/daniilMedvedev.png">
                 </div>
 
-                <div class = "playerPresentationDiv" id = "jannikSinnerPresentationDiv">
+                <div class = "playerPresentationDiv reveal" id = "jannikSinnerPresentationDiv">
                     <img src = "Images/Players/jannikSinner.png">
                 </div>
 
-                <div class = "playerPresentationDiv" id = "andrejRublëvPresentationDiv">
+                <div class = "playerPresentationDiv reveal" id = "andrejRublëvPresentationDiv">
                     <img src = "Images/Players/andrejRublëv.png">
                 </div>
 
-                <div class = "playerPresentationDiv" id = "stefanosTsitsipasPresentationDiv">
+                <div class = "playerPresentationDiv reveal" id = "stefanosTsitsipasPresentationDiv">
                     <img src = "Images/Players/stefanosTsitsipas.png">
                 </div>
 
-                <div class = "playerPresentationDiv" id = "alexanderZverevPresentationDiv">
+                <div class = "playerPresentationDiv reveal" id = "alexanderZverevPresentationDiv">
                     <img src = "Images/Players/alexanderZverev.png">
                 </div>
 
-                <div class = "playerPresentationDiv" id = "holgerRunePresentationDiv">
+                <div class = "playerPresentationDiv reveal" id = "holgerRunePresentationDiv">
                     <img src = "Images/Players/holgerRune.png">
                 </div>
             
@@ -342,265 +1007,287 @@
 
                 <br>
 
-                <div class = "flexboxContainer">
+                <section>
 
-                    <div class = "flip-card">
+                    <div class = "reveal">
 
-                        <div class = "flip-card-inner">
+                        <div class = "flexboxContainer">
 
-                            <div class = "flip-card-front">
-                                <img src = "Icons/General/palm.ico" style = "width: 300px; height: 300px">
+                            <div class = "flip-card">
+
+                                <div class = "flip-card-inner">
+
+                                    <div class = "flip-card-front">
+                                        <img src = "Icons/General/palm.ico" style = "width: 300px; height: 300px">
+                                    </div>
+
+                                    <div class = "flip-card-back">
+                                        <h1>Il nome iniziale del tennis:</h1> 
+                                        <p>
+                                        Si crede che le origini del tennis risalgano addirittura al 12° secolo in Francia, dove questo sport era inizialmente giocato
+                                        con le mani. Non a caso, esso era originariamente chiamato "jeu de paume," che significa "gioco di palmo."
+                                        </p>
+                                    </div>
+
+                                </div>
+
                             </div>
 
-                            <div class = "flip-card-back">
-                                <h1>Il nome iniziale del tennis:</h1> 
-                                <p>
-                                Si crede che le origini del tennis risalgano addirittura al 12° secolo in Francia, dove questo sport era inizialmente giocato
-                                con le mani. Non a caso, esso era originariamente chiamato "jeu de paume," che significa "gioco di palmo."
-                                </p>
+                            <div class = "flip-card">
+
+                                <div class = "flip-card-inner">
+
+                                    <div class = "flip-card-front">
+                                        <img src = "Icons/General/france.ico" style = "width: 300px; height: 300px">
+                                    </div>
+
+                                    <div class = "flip-card-back">
+                                        <h1>L'origine della parola "tennis":</h1>
+                                        <p>
+                                        Si crede che la parola "tennis" derivi dal francese "tenez", che significa "prendere" o "ricevere": questa parola, infatti, era
+                                        solitamente gridata dai giocatori prima di lanciare la palla in campo.
+                                        </p> 
+                                    </div>
+
+                                </div>
+
                             </div>
 
-                        </div>
+                            <div class = "flip-card">
 
-                    </div>
+                                <div class = "flip-card-inner">
 
-                    <div class = "flip-card">
+                                    <div class = "flip-card-front">
+                                        <img src = "Icons/General/chronometer.ico" style = "width: 300px; height: 300px">
+                                    </div>
 
-                        <div class = "flip-card-inner">
+                                    <div class = "flip-card-back">
+                                        <h1>La partita più lunga:</h1> 
+                                        <p>
+                                        La partita più lunga nella storia del tennis è stata giocata a Wimbledon, in Inghilterra, nel 2010 tra
+                                        John Isner e Nicolas Mahut; è durata più di 11 ore e ha avuto luogo in tre giorni.
+                                        </p>
+                                    </div>
 
-                            <div class = "flip-card-front">
-                                <img src = "Icons/General/france.ico" style = "width: 300px; height: 300px">
+                                </div>
+
                             </div>
 
-                            <div class = "flip-card-back">
-                                <h1>L'origine della parola "tennis":</h1>
-                                <p>
-                                Si crede che la parola "tennis" derivi dal francese "tenez", che significa "prendere" o "ricevere": questa parola, infatti, era
-                                solitamente gridata dai giocatori prima di lanciare la palla in campo.
-                                </p> 
-                            </div>
+                            <div class = "flip-card">
 
-                        </div>
+                                <div class = "flip-card-inner">
 
-                    </div>
+                                    <div class = "flip-card-front">
+                                        <img src = "Icons/General/rocket.ico" style = "width: 300px; height: 300px">
+                                    </div>
 
-                    <div class = "flip-card">
+                                    <div class = "flip-card-back">
+                                        <h1>La battuta più veloce:</h1> 
+                                        <p>
+                                        La battuta più veloce mai registrata nei match singoli maschili ha raggiunto la velocità di 163.7 mph (263.4 km/h) ed è
+                                        stata realizzata da Samuel Groth in Australia nel 2012.
+                                        </p>
+                                    </div>
 
-                        <div class = "flip-card-inner">
+                                </div>
 
-                            <div class = "flip-card-front">
-                                <img src = "Icons/General/chronometer.ico" style = "width: 300px; height: 300px">
-                            </div>
-
-                            <div class = "flip-card-back">
-                                <h1>La partita più lunga:</h1> 
-                                <p>
-                                La partita più lunga nella storia del tennis è stata giocata a Wimbledon, in Inghilterra, nel 2010 tra
-                                John Isner e Nicolas Mahut; è durata più di 11 ore e ha avuto luogo in tre giorni.
-                                </p>
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                    <div class = "flip-card">
-
-                        <div class = "flip-card-inner">
-
-                            <div class = "flip-card-front">
-                                <img src = "Icons/General/rocket.ico" style = "width: 300px; height: 300px">
-                            </div>
-
-                            <div class = "flip-card-back">
-                                <h1>La battuta più veloce:</h1> 
-                                <p>
-                                La battuta più veloce mai registrata nei match singoli maschili ha raggiunto la velocità di 163.7 mph (263.4 km/h) ed è
-                                stata realizzata da Samuel Groth in Australia nel 2012.
-                                </p>
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                    <div class = "break"></div>
-                    <br> <br>
-
-                    <div class = "flip-card">
-
-                        <div class = "flip-card-inner">
-
-                            <div class = "flip-card-front">
-                                <img src = "Icons/General/trophy.ico" style = "width: 300px; height: 300px">
-                            </div>
-
-                            <div class = "flip-card-back">
-                                <h1>"Grande Slam":</h1> 
-                                <p>
-                                L'espressione "Grande Slam", derivata dal gioco di carte "bridge", indica la vittoria, da parte di un
-                                tennista, dei 4 tornei principali in un solo anno: Australian Open, Roland Garros, Wimbledon e US Open.
-                                </p>
                             </div>
 
                         </div>
 
                     </div>
 
-                    <div class = "flip-card">
+                </section>
 
-                        <div class = "flip-card-inner">
+                <br> <br>
 
-                            <div class = "flip-card-front">
-                                <img src = "Icons/General/hawkeye.ico" style = "width: 300px; height: 300px">
+                <section>
+
+                    <div class = "reveal">
+
+                        <div class = "flexboxContainer">
+
+                            <div class = "flip-card">
+
+                                <div class = "flip-card-inner">
+
+                                    <div class = "flip-card-front">
+                                        <img src = "Icons/General/trophy.ico" style = "width: 300px; height: 300px">
+                                    </div>
+
+                                    <div class = "flip-card-back">
+                                        <h1>"Grande Slam":</h1> 
+                                        <p>
+                                        L'espressione "Grande Slam", derivata dal gioco di carte "bridge", indica la vittoria, da parte di un
+                                        tennista, dei 4 tornei principali in un solo anno: Australian Open, Roland Garros, Wimbledon e US Open.
+                                        </p>
+                                    </div>
+
+                                </div>
+
                             </div>
 
-                            <div class = "flip-card-back">
-                                <h1>La tecnologia di replay istantaneo:</h1> 
-                                <p>
-                                Il tennis è stato uno dei primi sport ad adottare l'utilizzo della tecnologia di replay istantaneo 
-                                (denominata "Hawkeye") per rivedere e controllare i colpi dubbi al limite del campo.
-                                </p>
+                            <div class = "flip-card">
+
+                                <div class = "flip-card-inner">
+
+                                    <div class = "flip-card-front">
+                                        <img src = "Icons/General/hawkeye.ico" style = "width: 300px; height: 300px">
+                                    </div>
+
+                                    <div class = "flip-card-back">
+                                        <h1>La tecnologia di replay istantaneo:</h1> 
+                                        <p>
+                                        Il tennis è stato uno dei primi sport ad adottare l'utilizzo della tecnologia di replay istantaneo 
+                                        (denominata "Hawkeye") per rivedere e controllare i colpi dubbi al limite del campo.
+                                        </p>
+                                    </div>
+
+                                </div>
+
                             </div>
 
-                        </div>
+                            <div class = "flip-card">
 
-                    </div>
+                                <div class = "flip-card-inner">
 
-                    <div class = "flip-card">
+                                    <div class = "flip-card-front">
+                                        <img src = "Icons/General/tennisBall.ico" style = "width: 300px; height: 300px">
+                                    </div>
 
-                        <div class = "flip-card-inner">
+                                    <div class = "flip-card-back">
+                                        <h1>Il colore delle palline:</h1> 
+                                        <p>
+                                        Le palline da tennis erano originariamente bianche, ma dal 1972 sono diventate gialle per renderle maggiormente visibili dai
+                                        giocatori in campo e sulla televisione a colori.
+                                        </p>
+                                    </div>
 
-                            <div class = "flip-card-front">
-                                <img src = "Icons/General/tennisBall.ico" style = "width: 300px; height: 300px">
+                                </div>
+
                             </div>
 
-                            <div class = "flip-card-back">
-                                <h1>Il colore delle palline:</h1> 
-                                <p>
-                                Le palline da tennis erano originariamente bianche, ma dal 1972 sono diventate gialle per renderle maggiormente visibili dai
-                                giocatori in campo e sulla televisione a colori.
-                                </p>
-                            </div>
+                            <div class = "flip-card">
 
-                        </div>
+                                <div class = "flip-card-inner">
 
-                    </div>
+                                    <div class = "flip-card-front">
+                                        <img src = "Icons/General/sweat.ico" style = "width: 300px; height: 300px">
+                                    </div>
 
-                    <div class = "flip-card">
+                                    <div class = "flip-card-back">
+                                        <h1>Il punto più lungo della storia:</h1>
+                                        <p>
+                                        Lo scambio più lungo mai registrato in un match professionale di tennis è durato ben 29 minuti e 31
+                                        secondi, durante una partita disputata nel 1984 tra Vicky Nelson-Dunbar e Jean Hepner.
+                                        </p>
+                                    </div>
 
-                        <div class = "flip-card-inner">
+                                </div>
 
-                            <div class = "flip-card-front">
-                                <img src = "Icons/General/sweat.ico" style = "width: 300px; height: 300px">
-                            </div>
-
-                            <div class = "flip-card-back">
-                                <h1>Il punto più lungo della storia:</h1>
-                                <p>
-                                Lo scambio più lungo mai registrato in un match professionale di tennis è durato ben 29 minuti e 31
-                                secondi, durante una partita disputata nel 1984 tra Vicky Nelson-Dunbar e Jean Hepner.
-                                </p>
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                    <div class = "break"></div>
-                    <br> <br>
-
-                    <div class = "flip-card">
-
-                        <div class = "flip-card-inner">
-
-                            <div class = "flip-card-front">
-                                <img src = "Icons/General/leather.ico" style = "width: 300px; height: 300px">
-                            </div>
-
-                            <div class = "flip-card-back">
-                                <h1>Il materiale delle palline:</h1>
-                                <p>
-                                Le palline da tennis erano originariamente fatte di legno massello o pelle e sono state sostituite solo gradualmente dalle
-                                palline di gomma e feltro a cui siamo abituati al giorno d'oggi.
-                                </p>
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                    <div class = "flip-card">
-
-                        <div class = "flip-card-inner">
-    
-                            <div class = "flip-card-front">
-                                <img src = "Icons/General/graphene.ico" style = "width: 300px; height: 300px">
-                            </div>
-    
-                            <div class = "flip-card-back">
-                                <h1>Il materiale delle racchette:</h1> 
-                                <p>
-                                Le racchette da tennis erano inizialmente fatte di legno, ma alla fine degli anni '60 sono stati introdotti metallo e
-                                nuovi materiali compositi; al giorno d'oggi, esse sono solitamente realizzate con materiali leggeri come grafite e fibra di
-                                carbonio.
-                                </p>
-                            </div>
-    
-                        </div>
-
-                    </div>
-
-                    <div class = "flip-card">
-
-                        <div class = "flip-card-inner">
-        
-                            <div class = "flip-card-front">
-                                <img src = "Icons/General/grunt.ico" style = "width: 300px; height: 300px">
-                            </div>
-        
-                            <div class = "flip-card-back">
-                                <h1>Il "grugnito":</h1> 
-                                <p>
-                                Il suono emesso dai tennisti nel momento in cui colpiscono la pallina viene comunemente chiamato "grugnito". Alcuni giocatori
-                                credono che grugnire aiuti a generare più potenza, mentre altri affermano che si tratta di un suono naturale causato dallo sforzo
-                                fisico.
-                                </p>
-                            </div>
-        
-                        </div>
-
-                    </div>
-
-                    <div class = "flip-card">
-
-                        <div class = "flip-card-inner">
-
-                            <div class = "flip-card-front">
-                                <img src = "Icons/General/audience.ico" style = "width: 300px; height: 300px">
-                            </div>
-
-                            <div class = "flip-card-back">
-                                <h1>Il match con più spettatori:</h1> 
-                                <p>
-                                Il match che ha registrato il maggior numero di spettatori è stato giocato nel 2010, quando 35,681 persone hanno
-                                assistito ad un match di esibizione tra Serena Williams e Kim Clijsters al King Baudouin Stadium a Bruxelles, in Belgio.
-                                </p>
                             </div>
 
                         </div>
 
                     </div>
 
-                </div>
+                </section>
+
+                <br> <br>
+
+                <section>
+
+                    <div class = "reveal">
+
+                        <div class = "flexboxContainer">
+
+                            <div class = "flip-card">
+
+                                <div class = "flip-card-inner">
+
+                                    <div class = "flip-card-front">
+                                        <img src = "Icons/General/leather.ico" style = "width: 300px; height: 300px">
+                                    </div>
+
+                                    <div class = "flip-card-back">
+                                        <h1>Il materiale delle palline:</h1>
+                                        <p>
+                                        Le palline da tennis erano originariamente fatte di legno massello o pelle e sono state sostituite solo gradualmente dalle
+                                        palline di gomma e feltro a cui siamo abituati al giorno d'oggi.
+                                        </p>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class = "flip-card">
+
+                                <div class = "flip-card-inner">
+            
+                                    <div class = "flip-card-front">
+                                        <img src = "Icons/General/graphene.ico" style = "width: 300px; height: 300px">
+                                    </div>
+            
+                                    <div class = "flip-card-back">
+                                        <h1>Il materiale delle racchette:</h1> 
+                                        <p>
+                                        Le racchette da tennis erano inizialmente fatte di legno, ma alla fine degli anni '60 sono stati introdotti metallo e
+                                        nuovi materiali compositi; al giorno d'oggi, esse sono solitamente realizzate con materiali leggeri come grafite e fibra di
+                                        carbonio.
+                                        </p>
+                                    </div>
+            
+                                </div>
+
+                            </div>
+
+                            <div class = "flip-card">
+
+                                <div class = "flip-card-inner">
                 
-            </div>
+                                    <div class = "flip-card-front">
+                                        <img src = "Icons/General/grunt.ico" style = "width: 300px; height: 300px">
+                                    </div>
+                
+                                    <div class = "flip-card-back">
+                                        <h1>Il "grugnito":</h1> 
+                                        <p>
+                                        Il suono emesso dai tennisti nel momento in cui colpiscono la pallina viene comunemente chiamato "grugnito". Alcuni giocatori
+                                        credono che grugnire aiuti a generare più potenza, mentre altri affermano che si tratta di un suono naturale causato dallo sforzo
+                                        fisico.
+                                        </p>
+                                    </div>
+                
+                                </div>
 
-            <div class = "presentationDiv" id = "newsPresentationDiv" style = "background-color: #cc00cc">
+                            </div>
 
-                <h2>Rimani aggiornato con le ultime notizie!</h2>
+                            <div class = "flip-card">
 
-                <img>
+                                <div class = "flip-card-inner">
+
+                                    <div class = "flip-card-front">
+                                        <img src = "Icons/General/audience.ico" style = "width: 300px; height: 300px">
+                                    </div>
+
+                                    <div class = "flip-card-back">
+                                        <h1>Il match con più spettatori:</h1> 
+                                        <p>
+                                        Il match che ha registrato il maggior numero di spettatori è stato giocato nel 2010, quando 35,681 persone hanno
+                                        assistito ad un match di esibizione tra Serena Williams e Kim Clijsters al King Baudouin Stadium a Bruxelles, in Belgio.
+                                        </p>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </section>
 
             </div>
 
