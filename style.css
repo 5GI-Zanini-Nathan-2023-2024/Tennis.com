@@ -497,40 +497,206 @@ body.signinBody {
   box-sizing: border-box;
 }
 
-/* Stile dei form aventi come classe la stringa "signinForm" (ovvero i form contenuti nelle pagine di sign in) */
-form.signinForm {
-  position: relative;
-  bottom: 6%;
+nav a img {
+  cursor: pointer;
+  width: 100px;
+  height: 100px;
 }
 
-/* Stile dei blocchi aventi come classe la stringa "signin" (ovvero i blocchi corrispondenti alle finestre di sign in) */
-div.signin {
+/* Stile comune ad entrambi i blocchi corrispondenti ai contenitori dei form di login e registrazione: */
+div.loginContainer, div.registrationContainer {
   position: relative;
-  left: 40%;
-  width: 500px;
-  height: 480px;
   text-align: center;
   background-color: #000;
   border-radius: 15px;
 }
 
+div.loginContainer {
+  margin-top: -5%;
+  left: 40%;
+  width: 500px;
+  height: 630px;
+}
+
+div.registrationContainer {
+  margin-top: -5%;
+  left: 27%;
+  width: 1000px;
+  height: 990px;
+}
+
 /* Stile dei titoli contenuti all'interno dei blocchi corrispondenti alle finestre di sign in: */
-div.signin h2 {
+div.loginContainer h2, div.registrationContainer h2 {
   font-size: 50px;
   color: #4CAF50;
 }
 
-/* Stile dei link e delle descrizioni dei campi input contenuti all'interno dei blocchi corrispondenti alle finestre di sign in: */
-div.signin label, div.signin a {
-  font-size: 20px;
-  color: #fff;
+/* Stile delle descrizioni affiancate ai campi input contenuti nelle pagine di registrazione ("registrazioneUtente.php", "registrazioneAutore.php", "registrazioneEditore.php" e "registrazioneLibro.php") e ricerca ("ricercaPerAutore.php", "ricercaPerEditore.php" e "ricercaPerAttributi.php"): */
+label {
+  font-size: 30px;
 }
 
-/* Stile dei campi input che compongono i form: */
-form input {
-  width: 240px;
-  height: 25px;
+/* Stile delle descrizioni affiancate a tutti gli input di tipo "radio": */
+label.radioLabel {
+  font-size: 20px;
+  float: right;
 }
+
+.formPersonalizzato {
+  display: inline-block;
+  background-color: #cc00cc;
+  width: 50vw;
+  padding: 2rem 4rem;
+  border-radius: 20px;
+}
+
+div.loginContainer form.formPersonalizzato {
+  max-width: 60%;
+}
+
+div.registrationContainer form.formPersonalizzato {
+  max-width: 75%;
+}
+  
+.gruppoInput {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.gruppoInput label {
+  color : #fff;
+  font-family : tahoma;
+}
+  
+.gruppoInput span {
+  color : #888;
+  font-family : tahoma;
+  font-size: 11px;
+}
+  
+.contenitoreInputIcona {
+  display: flex;
+  flex-direction: row;
+  border: 2px solid #374669;
+  border-radius: 5px;
+  background: #ffffff;
+  color: #000000;
+  align-items: center;
+  overflow: hidden;
+}
+  
+.errore {
+  border: 3px solid #ff0000;
+  background-color: #fdd3d3;
+}
+  
+.contenitoreInputIcona input {
+  outline: none;
+  border: none;
+  background: none;
+  font-size: 1em;
+  padding: .5em;
+  color: inherit;
+  flex : auto 1 1;
+  width : 100%;
+  background : none;
+  background-color : transperant;
+}
+  
+.contenitoreInputIcona .fa{
+  padding : 20px;
+}
+
+.fa-check {
+  color: #00ff00;
+}
+
+.fa-times {
+  color: #ff0000;
+}
+
+i.inputIcon {
+  color: #ffffff;
+  background-color: #374669;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  display: none;
+}
+
+input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+}
+
+select {
+  width: 285px;
+  height: 40px;
+  border-radius: 10px;
+  background-color: #00ff00;
+  padding: 0 15px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+select::after {
+  content: '';
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
+  width: 6px;
+  height: 6px;
+  border-right: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+}
+
+.fa.fa-eye:hover, .fa.fa-eye-slash:hover {
+  cursor: pointer;
+}
+
+.fa.fa-search {
+  font-size: 60px;
+}
+
+p.avvertimenti {
+  font-size: 25px;
+  font-weight: bold;
+  color: #ff0000;
+}
+
+p.conferme {
+  font-size: 25px;
+  font-weight: bold;
+  color: #00ff00;
+}
+
+/* Classe che definisce lo stile dei bottoni utili per effettuare la registrazione di un autore, un editore o un libro all'interno del database della biblioteca: */
+button.bottoniRegistrazione {
+  font-family: monospace;
+  font-size: 30px;
+  font-weight: bold;
+  background-color: #00ffff;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 9px #666;
+}
+
+/* Classe che definisce lo stile "hover" (presenza del cursore sopra al bottone) dei bottoni utili per effettuare la registrazione di un autore, un editore o un libro all'interno del database della biblioteca: */
+button.bottoniRegistrazione:hover {
+  cursor: pointer;
+  background-color: #00ff00;
+}
+
+/* Classe che definisce lo stile "active" (pressione del bottone) dei bottoni utili per effettuare la registrazione di un autore, un editore o un libro all'interno del database della biblioteca: */
+button.bottoniRegistrazione:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
 
 /* Stile dei paragrafi di avvertimento utilizzati per comunicare all'utente eventuali errori durante la registrazione o l'accesso: */
 p.avvertimenti {

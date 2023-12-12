@@ -5,6 +5,7 @@
     <head>
         <title>Login Area Riservata</title>
         <link rel = "icon" type = "image/x-icon" href = "/Icons/General/favicon.ico"> 
+        <link rel="stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity = "sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin = "anonymous" referrerpolicy = "no-referrer">
         <link href = "style.css" rel = "stylesheet">
         <script src = "javascript.js"> </script>
     </head>
@@ -12,33 +13,55 @@
     <body class = "signinBody">
 
     <nav>
-        <img src = "Icons/General/">
+        <a href = "./index.html"><img src = "Icons/General/home.ico"></a>
     </nav>
 
         <section class = "signinSection">
 
-            <div class = "signin">
+            <div class = "loginContainer">
 
                 <h2>Accedi alla tua area riservata</h2>
 
-                <form class = "signinForm" id = "formLogin" name = "formLogin">
+                <?php
+                    $todayDate = date("Y-m-d");
+                ?>
 
-                    <label for = "inputEmailUtente">Email</label> <br>
-                    <input type = "email" id = "inputEmailUtente" required>
+                <form id = "formLoginUtente" class = "formPersonalizzato" action = "login.php" method = "POST">
 
-                    <br> <br>
+                    <div class = "gruppoInput">
 
-                    <label for = "inputPasswordUtente">Password</label> <br>
-                    <input type = "password" id = "inputPasswordUtente" required>
+                    <div class = "gruppoInput">
 
-                    <br> <br>
+                        <label for = "inputEmailUtente"> Email </label>
+                        <br>
+                        <div class = "contenitoreInputIcona">
+                            <i class = "fa fa-envelope inputIcon"> </i>
+                            <input type = "email" id = "inputEmailUtente" name = "inputEmailUtente" pattern = "[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" title = "Formato email valido: user@mail.com" oninvalid = "styleInputFieldError()" onchange = "checkInputFieldValidity()" placeholder = "Email" required>
+                            <i class = "fa fa-check"> </i>
+                        </div>
 
-                    <a href = "./registration.php">Non hai ancora un account?</a>
+                    </div>
 
-                    <br> <br>
+                    <br>
 
-                    <button type = "submit" id = "bottoneConfermaLogin">LOGIN</button>
-                    
+                    <div class = "gruppoInput">
+
+                        <label for = "inputPasswordUtente"> Password </label>
+                        <br>
+                        <div class = "contenitoreInputIcona">
+                            <i class = "fa fa-key inputIcon"> </i>
+                            <input type = "password" id = "inputPasswordUtente" name = "inputPasswordUtente" pattern = "(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title = "La password deve contenere almeno 8 caratteri, una lettera maiuscola, una minuscola ed un numero" oninvalid = "styleInputFieldError()" onchange = "checkInputFieldValidity()" placeholder = "Password" required>
+                            <i class = "fa fa-check"> </i>
+                            <i class = "far fa-eye" id = "toggleUserPassword" style = "margin-right: 15px; cursor: pointer" onclick = "togglePasswordVisibility()"> </i>
+                        </div>
+                        <p id = "avvertimentoPasswordUtente" class = "avvertimenti"> </p>
+                                
+                    </div>
+
+                    <br>
+
+                    <button type = "submit" id = "bottoneRegistrazioneUtente" name = "bottoneRegistrazioneUtente" class = "bottoniRegistrazione">LOGIN</button>
+
                 </form>
 
                 <?php
@@ -76,7 +99,6 @@
                             }
 
                             else {
-
                                 session_regenerate_id();
                                 $_SESSION['session_id'] = session_id();
                                 $_SESSION['session_user'] = $user['username'];
