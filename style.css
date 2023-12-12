@@ -5,6 +5,9 @@ html, body {
   scroll-behavior: smooth;
 }
 
+/* --- INIZIO DELLO STILE DELLA BARRA DI NAVIGAZIONE (MENÙ): --- */
+
+/* Stile della lista non ordinata (unordered list): */
 ul {
   z-index: 2;
   width: 100%;
@@ -16,10 +19,12 @@ ul {
   top: 0;
 }
 
+/* Stile dei singoli elementi della lista: */
 li {
   float: left;
 }
 
+/* Stile dei link che costituiscono i singoli elementi della lista: */
 li a {
   display: block;
   font-size: 20px;
@@ -29,14 +34,17 @@ li a {
   text-decoration: none;
 }
 
+/* Stile dei link che costituiscono i singoli elementi della lista al momento del passaggio del mouse su di essi: */
 li a:hover {
   background-color: #4CAF50;
 }
 
+/* Stile della classe "active" (aggiunta agli elementi della lista in base alla posizione dello scroll nella pagina mediante il sistema "scrollspy"): */
 .active {
   background-color: #4CAF50;
 }
 
+/* Stile dell'immagine in alto a destra nella barra di navigazione, utile per permettere all'utente di accedere alla propria area riservata: */
 img#userIcon {
   cursor: pointer;
   position: fixed;
@@ -46,6 +54,10 @@ img#userIcon {
   height: 70px;
   background-color: #4CAF50;
 }
+
+/* --- FINE DELLO STILE DELLA BARRA DI NAVIGAZIONE (MENÙ) --- */
+
+/* INIZIO DELLO STILE DELLA SCHERMATA INIZIALE DI BENVENUTO: */
 
 /* Stile della sezione introduttiva della pagina "index.html": */
 div#welcomeDiv {
@@ -61,16 +73,19 @@ div#welcomeDiv img {
   object-fit: cover;     
 }
 
+/* Stile del titolo presente all'interno del blocco con id "welcomeDiv", visualizzabile nella pagina iniziale di benvenuto: */
 div#welcomeDiv h1 {
   font-size: 120px;
   top: 7%;
 }
 
+/* Stile del testo semplice presente all'interno del blocco con id "welcomeDiv", visualizzabile nella pagina iniziale di benvenuto: */
 div#welcomeDiv p {
   font-size: 30px;
   top: 22%;
 }
 
+/* Stile comune al titolo e al testo semplice presenti all'interno del blocco con id "welcomeDiv", visualizzabili nella pagina iniziale di benvenuto:*/
 div#welcomeDiv h1, p {
   color: #fff;
   position: absolute;
@@ -81,6 +96,7 @@ div#welcomeDiv h1, p {
   z-index: 2;
 }
 
+/* Stile dei blocchi aventi come classe una stringa che termina con la sottostringa "Arrow" (ovvero i due blocchi corrispondenti alle due frecce visualizzabili nella schermata iniziale di benvenuto): */
 div[class$="Arrow"] {
   display: inline-block;
   position: relative;
@@ -88,30 +104,36 @@ div[class$="Arrow"] {
   width: 200px;
 }
 
+/* Stile del blocco, contenuto nella freccia di sinistra, avente come classe la stringa "line" (ovvero il blocco corrispondente alla parte centrale della freccia di sinistra nella schermata iniziale di benvenuto): */
 div.leftArrow div.line {
   margin-left: 100px;
   margin-bottom: 10px;
 }
 
+/* Stile del blocco, contenuto nella freccia di destra, avente come classe la stringa "line" (ovvero il blocco corrispondente alla parte centrale della freccia di destra nella schermata iniziale di benvenuto): */
 div.rightArrow div.line {
   margin-right: -1530px;
   margin-top: -50px;
 }
 
+/* Stile comune ad entrambi i blocchi, contenuti all'interno della rispettiva freccia, aventi come classe la stringa "line" (ovvero i due blocchi che costituiscono la parte centrale delle due frecce visualizzabili nella schermata iniziale di benvenuto): */
 div[class$="Arrow"] div.line {
   width: 600px;
   background: #00ccff;
   height: 50px;
 }
 
-div.leftArrow .line, div.rightArrow.point {
+/* Stile del blocco corrispondente alla parte centrale della freccia di sinistra, avente come classe la stringa "line": */
+div.leftArrow .line {
   float: left;
 }
 
-div.rightArrow .line, div.leftArrow.line {
+/* Stile del blocco corrispondente alla parte centrale della freccia di destra, avente come classe la stringa "line": */
+div.rightArrow .line {
   float: right;
 }
 
+/* Stile comune alle punte di entrambe le frecce (i cui blocchi hanno come classe una stringa che termina con la sottostringa "Arrow"): */
 div[class$="Arrow"] .point {
   position: relative;
   display: inline-block;
@@ -121,17 +143,20 @@ div[class$="Arrow"] .point {
   border-bottom: 50px solid transparent;
 }
 
+/* Stile del blocco corrispondente alla punta della freccia di sinistra, avente come classe la stringa "point": */
 div.leftArrow .point {
   border-left: 80px solid #00ccff;
   margin-top: -180px;
   margin-bottom: 3px;
 }
 
+/* Stile del blocco corrispondente alla punta della freccia di destra, avente come classe la stringa "point": */
 div.rightArrow .point {
   border-right: 80px solid #00ccff;
   margin-left: 1050px;
 }
 
+/* Stile dell'immagine della pallina da tennis (avente come id la stringa "tennisBallButton") utilizzata per permettere all'utente di essere subito portato al corpo della pagina:*/
 img#tennisBallButton {
   width: 17.5%;
   height: 35%;
@@ -161,55 +186,53 @@ img#tennisBallButton:hover {
   animation-timing-function: linear; 
 }
 
+/* Stile comune ai due tipi di titoli più grandi: */
 h1, h2 {
   text-align: center;
 }
 
+/* Stile dei blocchi aventi come classe la stringa "presentationDiv" (ovvero i box adiacenti alla linea del tempo nella sezione dedicata alla storia): */
 div.presentationDiv {
   width: 100%;
   height: 1000px;
 }
 
+/* Stile dei titoli contenuti all'interno dei blocchi aventi come classe la stringa "presentationDiv" (ovvero i box adiacenti alla linea del tempo nella sezione dedicata alla storia): */
 div.presentationDiv h2 {
   font-size: 50px;
   padding-top: 1%;
-}
-
-h2.whiteHeading {
   color: #fff;
 }
 
-h2.blackHeading {
-  color: #000;
-}
+/* --- FINE DELLO STILE DELLA SCHERMATA INIZIALE DI BENVENUTO --- */
 
-img.presentationImage {
-  display: inline;
-  float: right;
-  margin-right: 2%;
-}
-
+/* Stile dell'article della pagina: */
 article {
   text-align: center;
 }
 
-.reveal {
+/* Stile dei blocchi aventi come classe la stringa "reveal" (ovvero i blocchi che dovranno comparire al momento dello scroll dell'utente): */
+div.reveal {
   position: relative;
   transform: translateY(150px);
   opacity: 0;
   transition: 2s all ease;
 }
 
-.reveal.displayed {
+/* Stile dei blocchi aventi come classi sia la stringa "reveal" che la stringa "displayed" (ovvero i blocchi che sono attualmente visualizzati dall'utente): */
+div.reveal.displayed {
   transform: translateY(0);
   opacity: 1;
 }
 
+/* --- INIZIO DELLO STILE DELLA SEZIONE DEDICATA ALLA STORIA: --- */
+
+/* Definizione dell'altezza della sezione che presenta la storia del tennis: */
 div#historyPresentationDiv {
   height: 2870px;
 }
 
-/* The actual timeline (the vertical ruler) */
+/* Stile della linea del tempo (la linea verticale arancione): */
 .timeline {
   position: relative;
   max-width: 1200px;
@@ -218,7 +241,7 @@ div#historyPresentationDiv {
   z-index: 0;
 }
 
-/* The actual timeline (the vertical ruler) */
+/* Stile della linea del tempo (la linea verticale arancione): */
 .timeline::after {
   content: '';
   position: absolute;
@@ -231,7 +254,7 @@ div#historyPresentationDiv {
   z-index: -1;
 }
 
-/* Container around content */
+/* Stile dei blocchi aventi come classe "container": */
 .container {
   padding: 10px 60px;
   position: relative;
@@ -264,7 +287,7 @@ div.right {
   right: -25.3%;
 }
 
-/* Add arrows to the left container (pointing right) */
+/* Stile dei triangolini rivolti verso destra che costituiscono la punta dei box adiacenti alla linea del tempo dalla parte sinistra, nella sezione dedicata alla storia: */
 div.left::before {
   content: " ";
   height: 0;
@@ -278,7 +301,7 @@ div.left::before {
   border-color: transparent transparent transparent white;
 }
 
-/* Add arrows to the right container (pointing left) */
+/* Stile dei triangolini rivolti verso sinistra che costituiscono la punta dei box adiacenti alla linea del tempo dalla parte destra, nella sezione dedicata alla storia: */
 div.right::before {
   content: " ";
   height: 0;
@@ -292,7 +315,7 @@ div.right::before {
   border-color: transparent white transparent transparent;
 }
 
-/* Fix the circle for containers on the right side */
+/* Specifica della posizione dei cerchi relativi ai box adiacenti alla linea del tempo dalla parte destra, nella sezione dedicata alla storia: */
 div.right::after {
   left: -22px;
 }
@@ -307,14 +330,19 @@ div.content {
   height: 300px;
 }
 
+/* Stile del testo semplice contenuto all'interno dei box adiacenti alla timeline: */
 div.content p {
   color: #000000;
 }
 
+/* --- FINE DELLO STILE DELLA SEZIONE DEDICATA ALLA STORIA --- */
+
+/* Definizione dell'altezza della sezione dedicata alla presentazione delle regole: */
 div#rulesPresentationDiv {
   height: 10700px;
 }
 
+/* Stile dei blocchi aventi come classe la stringa "flexboxContainer": */
 div.flexboxContainer {
   display: flex;
   flex-direction: row;
@@ -323,30 +351,33 @@ div.flexboxContainer {
   font-size: 30px;
 }
 
+/* Stile dei blocchi aventi come classe la stringa "cards": */
 div.cards {
   background-color: #ffffff;
   width: 20%;
   transition: all 0.2s ease;
 }
 
+/* Stile dei titoli più piccoli contenuti all'interno dei blocchi corrispondenti alle carte: */
 div.cards h5 {
   margin-left: 13px;
   margin-right: 13px;
 }
 
-.cards:hover {
+/* Stile dei blocchi aventi come classe la stringa "cards" (ovvero i blocchi corrispondenti alle carte) al momento del passaggio del mouse su di essi: */
+div.cards:hover {
   box-shadow: 5px 6px 6px 2px #e9ecef;
   transform: scale(1.1);
 }
 
-.break {
-  flex-basis: 100%;
-  height: 0;
+/* Definizione dell'altezza della sezione dedicata alla presentazione dei diversi colpi:*/
+div#shotsExplanationDiv {
+  height: 5780px;
 }
 
 /* Definizione dell'altezza della sezione che presenta i migliori giocatori: */
 div#bestPlayersPresentationDiv {
-  height: 5000px;
+  height: 7550px;
 }
 
 /* Definizione dell'altezza della sezione che presenta alcune curiosità: */
@@ -354,29 +385,65 @@ div#curiositiesPresentationDiv {
   height: 1340px;
 }
 
-.flip-card {
+/* --- INIZIO DELLO STILE DELLE CARD CAPOVOLGIBILI: --- */
+
+/* Stile dei blocchi aventi come classe la stringa "flip-card" (ovvero i blocchi corrispondenti alle carte capovolgibili): */
+div.flip-card {
   background-color: transparent;
   width: 350px;
   height: 350px;
   perspective: 1000px;
 }
 
-.flip-card h1 {
+/* --- INIZIO DELLO STILE DELLE CARTE CAPOVOLGIBILI UTILIZZATE PER LA SPIEGAZIONE DEI COLPI: --- */
+
+/* Stile dei blocchi aventi come classi entrambe le stringhe "flip-card" e "shotExplanation" (ovvero i blocchi corrispondenti alle carte utilizzate per presentare i vari colpi): */
+div.flip-card.shotExplanation {
+  width: 450px;
+  height: 450px;
+}
+
+/* Stile delle immagini contenute all'interno dei blocchi corrispondenti alle carte utilizzate per presentare i vari colpi: */
+div.flip-card.shotExplanation img {
+  width: 325px;
+  height: 325px;
+}
+
+/* Stile dei titoli più piccoli contenuti all'interno dei blocchi corrispondenti alle carte utilizzate per presentare i vari colpi: */
+div.flip-card.shotExplanation h3 {
+  position: relative;
+  margin-top: 25px;
+}
+
+/* Stile dei paragrafi semplici contenuti all'interno dei blocchi corrispondenti alle carte utilizzate per presentare i vari colpi: */
+div.flip-card.shotExplanation p {
+  font-size: 16px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/* --- FINE DELLO STILE DELLE CARTE CAPOVOLGIBILI UTILIZZATE PER LA SPIEGAZIONE DEI COLPI: --- */
+
+/* Stile dei titoli più grandi contenuti all'interno dei blocchi corrispondenti alle carte capovolgibili: */
+div.flip-card h1 {
   font-size: 30px;
 }
 
-.flip-card p {
+/* Stile dei paragrafi semplici contenuti all'interno dei blocchi corrispondenti alle carte capovolgibili: */
+div.flip-card p {
   font-size: 22px;
   margin-left: 15px;
   margin-right: 15px;
 }
 
-.flip-card img {
+/* Stile delle immagini contenute all'interno dei blocchi corrispondenti alle carte capovolgibili: */
+div.flip-card img {
   position: relative;
   top: 7%;
 }
 
-.flip-card-inner {
+/* Stile dei blocchi aventi come classe la stringa "flip-card-inner" (ovvero i blocchi corrispondenti al contenuto vero e proprio delle carte capovolgibili): */
+div.flip-card-inner {
   position: relative;
   width: 100%;
   height: 100%;
@@ -386,10 +453,12 @@ div#curiositiesPresentationDiv {
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
 
-.flip-card:hover .flip-card-inner {
+/* Stile comune ai blocchi aventi come classe la stringa "flip-card" (ovvero i blocchi corrispondenti alle carte capovolgibili) al momento del passaggio del mouse su di essi e dei blocchi aventi come classe la stringa "flip-card-inner" (ovvero i blocchi corrispondenti al contenuto vero e proprio delle carte capovolgibili): */
+div.flip-card:hover div.flip-card-inner {
   transform: rotateY(180deg);
 }
 
+/* Stile comune ai blocchi aventi come classe la stringa "flip-card-front" (ovvero i blocchi corrispondenti alla parte anteriore delle carte capovolgibili) e a quelli aventi come classe la stringa "flip-card-back" (ovvero i blocchi corrispondenti alla parte posteriore delle carte capovolgibili): */
 .flip-card-front, .flip-card-back {
   position: absolute;
   width: 100%;
@@ -398,29 +467,106 @@ div#curiositiesPresentationDiv {
   backface-visibility: hidden;
 }
 
-.flip-card-front {
+/* Stile dei blocchi aventi come classe la stringa "flip-card-front" (ovvero i blocchi corrispondenti alla parte frontale delle carte capovolgibili): */
+div.flip-card-front {
   background-color: #fff;
   color: black;
 }
 
-.flip-card-back {
+/* Stile dei blocchi aventi come classe la stringa "flip-card-back" (ovvero i blocchi corrispondenti alla parte posteriore delle carte capovolgibili): */
+div.flip-card-back {
   background-color: #2980b9;
   color: #fff;
   transform: rotateY(180deg);
 }
 
-/* Stile della sezione "footer" della pagina: */
+/* --- FINE DELLO STILE DELLE CARTE CAPOVOLGIBILI --- */
+
+/* --- INIZIO DELLO STILE RELATIVO ALLE PAGINE "login.PHP" E "registration.PHP": --- */
+
+/* Stile degli elementi "html" aventi come classe la stringa "signinPage": */
+html.signinPage {
+  background-color: transparent;
+}
+
+/* Stile degli elementi "body" aventi come classe la stringa "signinBody": */
+body.signinBody {
+  background-color: transparent;
+  background-image: url("Images/Backgrounds/land.jpg");
+  background-size: cover;
+  box-sizing: border-box;
+}
+
+/* Stile dei form aventi come classe la stringa "signinForm" (ovvero i form contenuti nelle pagine di sign in) */
+form.signinForm {
+  position: relative;
+  bottom: 6%;
+}
+
+/* Stile dei blocchi aventi come classe la stringa "signin" (ovvero i blocchi corrispondenti alle finestre di sign in) */
+div.signin {
+  position: relative;
+  left: 40%;
+  width: 500px;
+  height: 480px;
+  text-align: center;
+  background-color: #000;
+  border-radius: 15px;
+}
+
+/* Stile dei titoli contenuti all'interno dei blocchi corrispondenti alle finestre di sign in: */
+div.signin h2 {
+  font-size: 50px;
+  color: #4CAF50;
+}
+
+/* Stile dei link e delle descrizioni dei campi input contenuti all'interno dei blocchi corrispondenti alle finestre di sign in: */
+div.signin label, div.signin a {
+  font-size: 20px;
+  color: #fff;
+}
+
+/* Stile dei campi input che compongono i form: */
+form input {
+  width: 240px;
+  height: 25px;
+}
+
+/* Stile dei paragrafi di avvertimento utilizzati per comunicare all'utente eventuali errori durante la registrazione o l'accesso: */
+p.avvertimenti {
+  color: #ff0000;
+}
+
+/* Stile del bottone utilizzato per confermare il login (e quindi l'accesso alla propria area riservata): */
+button#bottoneConfermaLogin {
+  cursor: pointer;
+  width: 200px;
+  height: 40px;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: #00ff00;
+}
+
+/* --- FINE DELLO STILE RELATIVO ALLE PAGINE "registration.PHP" E "login.PHP" ---*/
+
+/* --- INIZIO DELLO STILE DEI FOOTER DELLE PAGINE: --- */
+
+/* Stile del blocco che costituisce il footer vero e proprio: */
 footer {
   text-align: center;
   background-color: #fff;
   height: 150px;
 }
 
+/* Stile dei paragrafi semplici contenuti all'interno del footer: */
 footer p {
   font-size: 30px;
   color: #000;
 }
 
+/* Stile dei link contenuti all'interno del footer: */
 footer a {
   font-size: 30px;
 }
+
+/* --- FINE DELLO STILE DEI FOOTER DELLE PAGINE ---*/

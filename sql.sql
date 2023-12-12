@@ -17,6 +17,11 @@ CREATE TABLE Utenti (
 	Nascita DATE NOT NULL
 );
 
+-- Popolamento della tabella "Utenti": --
+INSERT INTO Utenti
+	VALUES
+		(1, "Nathan", "Zanini", "19636@studenti.marconiverona.edu.it", "Password123", "3888284489", "Verona", "Via Udino Bombieri 18/A", "2005-12-12");
+
 /*
 
 ---------- ESEMPI DI QUERY TESTATE: ----------
@@ -30,7 +35,7 @@ SELECT Cognome FROM Utenti;									-----> Restituisce solo la colonna "Cognome"
 SELECT Email FROM Utenti;									-----> Restituisce solo la colonna "Email" della tabella "Utenti".
 SELECT Password FROM Utenti;								-----> Restituisce solo la colonna "Password" della tabella "Utenti".
 SELECT Telefono FROM Utenti;								-----> Restituisce solo la colonna "Telefono" della tabella "Utenti".
-SELECT Provincia FROM Utenti;								-----> Restituisce solo la colonna "Provincia" della tabella "Utenti".
+SELECT Città FROM Utenti;									-----> Restituisce solo la colonna "Città" della tabella "Utenti".
 SELECT Via FROM Utenti;										-----> Restituisce solo la colonna "Via" della tabella "Utenti".
 SELECT Nascita FROM Utenti;									-----> Restituisce solo la colonna "Nascita" della tabella "Utenti".
 
@@ -59,9 +64,9 @@ SELECT * FROM Utenti WHERE Telefono = '3888284489';			-----> Restituisce tutte l
 SELECT * FROM Utenti ORDER BY Telefono ASC;					-----> Restituisce tutte le righe e le colonne della tabella "Utenti" ordinandole in ordine alfabetico (in questo caso, poichè la stringa è costituita da numeri, in ordine crescente) in base alla stringa contenuta nel campo "Telefono" di ciascuna riga.
 SELECT * FROM Utenti ORDER BY Telefono DESC;				-----> Restituisce tutte le righe e le colonne della tabella "Utenti" ordinandole in ordine alfabetico inverso (in questo caso, poichè la stringa è costituita da numeri, in ordine decrescente) in base alla stringa contenuta nel campo "Telefono" di ciascuna riga.
 
-SELECT * FROM Utenti WHERE Provincia = 'Verona';			-----> Restituisce tutte le colonne di tutte le righe della tabella in cui nel campo "Provincia" si trova la stringa "Verona" (nel caso di questo database solo 1 riga, ovvero l'unica).
-SELECT * FROM Utenti ORDER BY Provincia ASC;				-----> Restituisce tutte le righe e le colonne della tabella "Utenti" ordinandole in ordine alfabetico in base alla stringa contenuta nel campo "Provincia" di ciascuna riga.
-SELECT * FROM Utenti ORDER BY Provincia DESC;				-----> Restituisce tutte le righe e le colonne della tabella "Utenti" ordinandole in ordine alfabetico inverso in base alla stringa contenuta nel campo "Provincia" di ciascuna riga.
+SELECT * FROM Utenti WHERE Città = 'Verona';				-----> Restituisce tutte le colonne di tutte le righe della tabella in cui nel campo "Città" si trova la stringa "Verona" (nel caso di questo database solo 1 riga, ovvero l'unica).
+SELECT * FROM Utenti ORDER BY Città ASC;					-----> Restituisce tutte le righe e le colonne della tabella "Utenti" ordinandole in ordine alfabetico in base alla stringa contenuta nel campo "Città" di ciascuna riga.
+SELECT * FROM Utenti ORDER BY Città DESC;					-----> Restituisce tutte le righe e le colonne della tabella "Utenti" ordinandole in ordine alfabetico inverso in base alla stringa contenuta nel campo "Città" di ciascuna riga.
 
 SELECT * FROM Utenti WHERE Via = 'Via Udino Bombieri 18/A';	-----> Restituisce tutte le colonne di tutte le righe della tabella in cui nel campo "Via" si trova la stringa "Via Udino Bombieri 18/A" (nel caso di questo database solo 1 riga, ovvero l'unica).
 SELECT * FROM Utenti ORDER BY Via ASC;						-----> Restituisce tutte le righe e le colonne della tabella "Utenti" ordinandole in ordine alfabetico in base alla stringa contenuta nel campo "Via" di ciascuna riga.
