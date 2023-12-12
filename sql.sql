@@ -12,7 +12,7 @@ CREATE TABLE Utenti (
 	Email varchar(319) NOT NULL,
 	Password varchar(128) NOT NULL,
 	Telefono char(10) NOT NULL,
-	Provincia varchar(30) NOT NULL,
+	Città varchar(30) NOT NULL,
 	Via varchar(50) NOT NULL,
 	Nascita DATE NOT NULL
 );
@@ -20,16 +20,16 @@ CREATE TABLE Utenti (
 -- Popolamento della tabella "Utenti": --
 INSERT INTO Utenti
 	VALUES
-		(1, "Nathan", "Zanini", "19636@studenti.marconiverona.edu.it", "Password123", "3888284489", "Verona", "Via Udino Bombieri 18/A", "2005-12-12");
-		(2, "Luca", "Rossi", "luca.rossi@gmail.com", "P@ssword123", "3125673267", "Roma", "Via Roma 10", "10/01/1980");
-		(3, "Sofia", "Bianchi", "sofia.bianchi@gmail.com", "Passw0rd123", "3432257854", "Milano", "Via Milano 20", "20/02/1985");
-		(4, "Marco", "Russo", "marco.russo@gmail.com", "P@ssw0rd123", "3764218912", "Firenze", "Via Firenze 40", "30/03/1990");
-		(5, "Francesco", "Esposito", "francesco.esposito@gmail.com", "P@6sw0rd123", "3987635521", "Palermo", "Via Palermo 50", "20/05/1995");
-		(6, "Valentina", "Conti", "valentina.conti@gmail.com", "P@66w0rd123", "3987648392", "Torino", "Via Torino 60", "30/06/1993");
-		(7, "Alessandro", "Marini", "alessandro.marini@gmail.com", "P@66w03d123", "3874859212", "Bologna", "Via Bologna 80", "20/08/1992");
-		(8, "Elena", "Gentile", "elena.gentile@gmail.com", "Password123!", "3976543678", "Venezia", "Via Venezia 90", "30/09/1997");
-		(9, "Giovanni", "Caruso", "giovanni.caruso@gmail.com", "Password321", "3566432674", "Cosenza", "Via Cosenza 10", "09/09/1997");
-		(10, "Giorgia", "Ferrari", "giorgia.ferrari@gmail.com", "Password213", "3865930029", "Potenza", "Via Potenza 30", "08/08/1992");
+		(1, "Nathan", "Zanini", "19636@studenti.marconiverona.edu.it", "Password123", "3888284489", "Verona", "Via Udino Bombieri 18/A", "2005-12-12"),
+		(2, "Luca", "Rossi", "luca.rossi@gmail.com", "P@ssword123", "3125673267", "Roma", "Via Roma 10", "1980-01-10"),
+		(3, "Sofia", "Bianchi", "sofia.bianchi@gmail.com", "Passw0rd123", "3432257854", "Milano", "Via Milano 20", "1985-02-20"),
+		(4, "Marco", "Russo", "marco.russo@gmail.com", "P@ssw0rd123", "3764218912", "Firenze", "Via Firenze 40", "1990-03-30"),
+		(5, "Francesco", "Esposito", "francesco.esposito@gmail.com", "P@6sw0rd123", "3987635521", "Palermo", "Via Palermo 50", "1995-05-20"),
+		(6, "Valentina", "Conti", "valentina.conti@gmail.com", "P@66w0rd123", "3987648392", "Torino", "Via Torino 60", "1993-06-30"),
+		(7, "Alessandro", "Marini", "alessandro.marini@gmail.com", "P@66w03d123", "3874859212", "Bologna", "Via Bologna 80", "1992-08-20"),
+		(8, "Elena", "Gentile", "elena.gentile@gmail.com", "Password123!", "3976543678", "Venezia", "Via Venezia 90", "1997-09-30"),
+		(9, "Giovanni", "Caruso", "giovanni.caruso@gmail.com", "Password321", "3566432674", "Cosenza", "Via Cosenza 10", "1997-09-09"),
+		(10, "Giorgia", "Ferrari", "giorgia.ferrari@gmail.com", "Password213", "3865930029", "Potenza", "Via Potenza 30", "1992-08-08");
 
 /*
 
