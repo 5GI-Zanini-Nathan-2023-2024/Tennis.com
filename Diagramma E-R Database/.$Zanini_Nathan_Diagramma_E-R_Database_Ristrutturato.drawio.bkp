@@ -1,0 +1,241 @@
+<mxfile host="Electron" modified="2023-12-16T18:04:10.983Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/22.1.2 Chrome/114.0.5735.289 Electron/25.9.4 Safari/537.36" etag="i1ekat2SDY33_7Kou_C3" version="22.1.2" type="device">
+  <diagram name="Pagina-1" id="eLGCSaUiyfs6_m6hanxQ">
+    <mxGraphModel dx="714" dy="418" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="IBUM7Amg459cs2K98uCv-1" value="&lt;b&gt;&lt;font style=&quot;font-size: 24px;&quot;&gt;UTENTI&lt;/font&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="354" y="392" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="IBUM7Amg459cs2K98uCv-2" value="" style="endArrow=none;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.123;exitY=0;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="IBUM7Amg459cs2K98uCv-1" target="IBUM7Amg459cs2K98uCv-3">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="361" y="382" as="sourcePoint" />
+            <mxPoint x="450" y="362" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IBUM7Amg459cs2K98uCv-3" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="359.75" y="344" width="18" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="IBUM7Amg459cs2K98uCv-4" value="&lt;b&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;ID&lt;/font&gt;&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="348.75" y="320" width="40" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="IBUM7Amg459cs2K98uCv-5" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Nome&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="377.75" y="320" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="IBUM7Amg459cs2K98uCv-6" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Cognome&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="421" y="320" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="IBUM7Amg459cs2K98uCv-7" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Telefono&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="219" y="433" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="IBUM7Amg459cs2K98uCv-8" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Città&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="538.5" y="433" width="50" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="IBUM7Amg459cs2K98uCv-9" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Via&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="543" y="407" width="40" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="IBUM7Amg459cs2K98uCv-10" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Nascita&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="544" y="379" width="70" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="IBUM7Amg459cs2K98uCv-11" value="" style="endArrow=none;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1.002;exitY=0.048;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="IBUM7Amg459cs2K98uCv-1" target="IBUM7Amg459cs2K98uCv-12">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="490" y="382" as="sourcePoint" />
+            <mxPoint x="460" y="372" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IBUM7Amg459cs2K98uCv-12" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="525" y="383" width="24" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="IBUM7Amg459cs2K98uCv-13" value="" style="endArrow=none;html=1;rounded=0;exitX=0.887;exitY=-0.005;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitPerimeter=0;" edge="1" parent="1" source="IBUM7Amg459cs2K98uCv-1" target="IBUM7Amg459cs2K98uCv-14">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="454" y="432" as="sourcePoint" />
+            <mxPoint x="490" y="402" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IBUM7Amg459cs2K98uCv-14" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="451" y="343" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="IBUM7Amg459cs2K98uCv-15" value="" style="endArrow=none;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.445;exitY=0.003;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="IBUM7Amg459cs2K98uCv-1" target="IBUM7Amg459cs2K98uCv-16">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="421" y="382" as="sourcePoint" />
+            <mxPoint x="397.75" y="362.3399999999999" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IBUM7Amg459cs2K98uCv-16" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="397.75" y="343" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="IBUM7Amg459cs2K98uCv-17" value="" style="endArrow=none;html=1;rounded=0;exitX=-0.001;exitY=0.583;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitPerimeter=0;" edge="1" parent="1" target="IBUM7Amg459cs2K98uCv-18">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="354" y="450" as="sourcePoint" />
+            <mxPoint x="490" y="425" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IBUM7Amg459cs2K98uCv-18" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="290" y="440" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="IBUM7Amg459cs2K98uCv-19" value="" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="IBUM7Amg459cs2K98uCv-1" target="IBUM7Amg459cs2K98uCv-20">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="484" y="407" as="sourcePoint" />
+            <mxPoint x="470" y="382" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IBUM7Amg459cs2K98uCv-20" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="525" y="410" width="24" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="IBUM7Amg459cs2K98uCv-21" value="" style="endArrow=none;html=1;rounded=0;exitX=1.002;exitY=0.077;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitPerimeter=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="474" y="449.83000000000004" as="sourcePoint" />
+            <mxPoint x="525" y="449.83000000000004" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IBUM7Amg459cs2K98uCv-22" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="525" y="437" width="24" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="IBUM7Amg459cs2K98uCv-23" value="&lt;font style=&quot;font-size: 24px;&quot;&gt;&lt;b&gt;PRODOTTO&lt;/b&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="339" y="770.5" width="150" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="IBUM7Amg459cs2K98uCv-24" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="290" y="765.5" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="IBUM7Amg459cs2K98uCv-25" value="Nome" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="239" y="760" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="IBUM7Amg459cs2K98uCv-26" value="Codice" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="239" y="785.5" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="IBUM7Amg459cs2K98uCv-27" value="Marca" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="523" y="760" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="IBUM7Amg459cs2K98uCv-28" value="Descrizione" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="209" y="810.5" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="IBUM7Amg459cs2K98uCv-29" value="Immagine" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="528.5" y="810.5" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="IBUM7Amg459cs2K98uCv-30" value="Prezzo" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="528.5" y="785.5" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="IBUM7Amg459cs2K98uCv-31" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Email&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="230" y="385" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="IBUM7Amg459cs2K98uCv-32" value="" style="endArrow=none;html=1;rounded=0;exitX=-0.001;exitY=0.583;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitPerimeter=0;" edge="1" parent="1" target="IBUM7Amg459cs2K98uCv-33">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="354" y="402" as="sourcePoint" />
+            <mxPoint x="490" y="377" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IBUM7Amg459cs2K98uCv-33" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="290" y="392" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="IBUM7Amg459cs2K98uCv-34" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Password&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="214" y="409" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="IBUM7Amg459cs2K98uCv-35" value="" style="endArrow=none;html=1;rounded=0;exitX=-0.001;exitY=0.583;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitPerimeter=0;" edge="1" parent="1" target="IBUM7Amg459cs2K98uCv-36">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="354" y="425" as="sourcePoint" />
+            <mxPoint x="490" y="400" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IBUM7Amg459cs2K98uCv-36" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="290" y="415" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="IBUM7Amg459cs2K98uCv-37" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="518.5" y="790.5" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="IBUM7Amg459cs2K98uCv-38" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="514" y="765.5" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="IBUM7Amg459cs2K98uCv-39" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="290" y="815.5" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="IBUM7Amg459cs2K98uCv-40" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="290" y="791" width="19" height="19" as="geometry" />
+        </mxCell>
+        <mxCell id="IBUM7Amg459cs2K98uCv-41" value="" style="endArrow=none;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="IBUM7Amg459cs2K98uCv-40" target="IBUM7Amg459cs2K98uCv-23">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="310" y="795.5" as="sourcePoint" />
+            <mxPoint x="360" y="745.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IBUM7Amg459cs2K98uCv-42" value="" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.082;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="IBUM7Amg459cs2K98uCv-24" target="IBUM7Amg459cs2K98uCv-23">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="320" y="755.5" as="sourcePoint" />
+            <mxPoint x="330" y="765.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IBUM7Amg459cs2K98uCv-43" value="" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.001;entryY=0.922;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="IBUM7Amg459cs2K98uCv-39" target="IBUM7Amg459cs2K98uCv-23">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="310" y="873.5" as="sourcePoint" />
+            <mxPoint x="330" y="825.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IBUM7Amg459cs2K98uCv-44" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="518.5" y="815" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="IBUM7Amg459cs2K98uCv-45" value="" style="endArrow=none;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.082;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="IBUM7Amg459cs2K98uCv-23" target="IBUM7Amg459cs2K98uCv-38">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="490" y="755.5" as="sourcePoint" />
+            <mxPoint x="510" y="755.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IBUM7Amg459cs2K98uCv-46" value="" style="endArrow=none;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.082;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="488.5" y="800.3299999999999" as="sourcePoint" />
+            <mxPoint x="518.5" y="800.3299999999999" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IBUM7Amg459cs2K98uCv-47" value="" style="endArrow=none;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.082;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="489" y="825.3299999999999" as="sourcePoint" />
+            <mxPoint x="519" y="825.3299999999999" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IBUM7Amg459cs2K98uCv-50" value="" style="endArrow=none;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="IBUM7Amg459cs2K98uCv-55" target="IBUM7Amg459cs2K98uCv-1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="350" y="480" as="sourcePoint" />
+            <mxPoint x="435.5" y="529" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IBUM7Amg459cs2K98uCv-51" value="(0,n)" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;rotation=0;" vertex="1" parent="1">
+          <mxGeometry x="409.5" y="452" width="50" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="IBUM7Amg459cs2K98uCv-52" value="(0,n)" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;rotation=0;" vertex="1" parent="1">
+          <mxGeometry x="409.5" y="740.5" width="50" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="IBUM7Amg459cs2K98uCv-53" value="&lt;b&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;SALVATAGGIO&lt;/font&gt;&lt;/b&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="344" y="584.5" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="IBUM7Amg459cs2K98uCv-54" value="Oggetto" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="363" y="690" width="101.5" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="IBUM7Amg459cs2K98uCv-55" value="Soggetto" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="364" y="500" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="IBUM7Amg459cs2K98uCv-56" value="" style="endArrow=none;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="IBUM7Amg459cs2K98uCv-54" target="IBUM7Amg459cs2K98uCv-53">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="249" y="720" as="sourcePoint" />
+            <mxPoint x="299" y="670" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IBUM7Amg459cs2K98uCv-57" value="" style="endArrow=none;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="IBUM7Amg459cs2K98uCv-23" target="IBUM7Amg459cs2K98uCv-54">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="451" y="750" as="sourcePoint" />
+            <mxPoint x="501" y="700" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IBUM7Amg459cs2K98uCv-61" value="" style="endArrow=none;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="IBUM7Amg459cs2K98uCv-53" target="IBUM7Amg459cs2K98uCv-55">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="274.5" y="570" as="sourcePoint" />
+            <mxPoint x="324.5" y="520" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IBUM7Amg459cs2K98uCv-62" value="(1,1)" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="409.5" y="644.5" width="50" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="IBUM7Amg459cs2K98uCv-63" value="(1,1)" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="409.5" y="555" width="50" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

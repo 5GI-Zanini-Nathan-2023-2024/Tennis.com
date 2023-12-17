@@ -22,10 +22,6 @@
 
                 <h2>Accedi alla tua area riservata</h2>
 
-                <?php
-                    $todayDate = date("Y-m-d");
-                ?>
-
                 <form id = "formLoginUtente" class = "formPersonalizzato" action = "login.php" method = "POST">
 
                     <div class = "gruppoInput">
@@ -66,19 +62,13 @@
 
                 <?php
 
+                    include "connection.php";
                     session_start();
 
-                    if (isset($_SESSION['session_id'])) {
-                        header('Location: dashboard.php');
-                        exit;
-                    }
+                    if (isset($_POST) && !empty($_POST)) {
 
-                    if (!empty($_POST)) {
-
-                        include "connection.php";
-
-                        $userEmail = $_POST["inputEmailUtente"] ?? '';
-                        $userPassword = $_POST["inputPasswordUtente"] ?? '';
+                        $userEmail = $_POST["inputEmailUtente"];
+                        $userPassword = $_POST["inputPasswordUtente"];
 
                         if (empty($userEmail) || empty($userPassword)) {
                             echo '<br> <p class = "avvertimenti"> Attenzione: Assicurati di aver inserito le tue credenziali!</p>';
@@ -86,27 +76,44 @@
 
                         else {
 
+                            // Preparazione della query SELECT che dovrà essere effettuata sul database:
                             $statement = $connection->prepare("SELECT Email, Password FROM Utenti WHERE Email = ?");
+                            // Bind dei parametri per prevenire attacchi di tipo SQL Injection:
                             $statement->bind_param("s", $userEmail);
+                            // Esecuzione della query:
                             $statement->execute();
+                            // Salvataggio del risultato della query:
+                            $statement->store_result();
 
-                            $queryResult = mysqli_stmt_get_result($statement);
-                            $fetchResult = mysqli_fetch_field($queryResult);
-                            $passwordHash = $fetchResult['Password'];
+                            // Caso in cui la query abbia restituito almeno 1 riga (ovvero l'email inserita dall'utente sia stata trovata all'interno del database):
+                            if ($statement->num_rows > 0) {
 
-                            if (!$result || password_verify($userPassword, $passwordHash) === false) {
-                                echo '<br> <p class = "avvertimenti"> Attenzione: Le credenziali inserite sono errate!</p>';
+                                $statement->bind_result($databaseEmail, $databasePassword);
+                                $statement->fetch();
+
+                                if (password_verify($userPassword, $databasePassword)) {
+
+                                    echo "<p class = 'conferme' style = 'margin-top: 400px'> Perfetto: l'accesso è avvenuto correttamente! </p>";
+                                    $_SESSION['loggedin'] = true;
+                                    $_SESSION['session_id'] = session_id();
+                                    $_SESSION['session_user_email'] = $userEmail;
+                                    header('Location: dashboard.php');
+                                    exit;
+                                }
+
+                                else {
+                                    echo '<p class = "avvertimenti" style = "margin-top: 440px"> Attenzione: Le credenziali inserite sono errate!</p>';
+                                }
                             }
 
+                            // Caso in cui la query non abbia restituito alcuna riga (ovvero l'email inserita dall'utente non sia stata trovata all'interno del database):
                             else {
-                                session_regenerate_id();
-                                $_SESSION['session_id'] = session_id();
-                                $_SESSION['session_user'] = $user['username'];
-                                
-                                header('Location: dashboard.php');
-                                exit;
+                                echo '<p class = "avvertimenti" style = "margin-top: 380px"> Attenzione: Non sei ancora registrato a questo sito!</p>';
+                                echo '<a href = "./registration.php" style = "margin-top: 80px; font-size: 25px">Registrati</a>';
                             }
                         }
+
+                        $statement->close();
                     }
                 ?>
 

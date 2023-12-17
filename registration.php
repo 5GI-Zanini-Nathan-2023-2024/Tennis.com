@@ -10,7 +10,7 @@
         <script src = "javascript.js"> </script>
     </head>
 
-    <body class = "signinBody">
+    <body class = "registrationBody">
 
         <nav>
             <a href = "./index.html"><img src = "Icons/General/home.ico"></a>
@@ -22,13 +22,9 @@
 
                 <h2 style = "padding-top: 30px">Registrati</h2>
 
-                <?php
-                    $todayDate = date("Y-m-d");
-                ?>
+                <form id = "formRegistrazioneUtente" class = "formPersonalizzato" action = "registration.php" method = "POST">
 
-                <form id = "formRegistrazioneUtente" class = "formPersonalizzato" action = "registrazioneUtente.php" method = "POST">
-
-                    <div class = "gruppoInput" style = "display: inline; float: left">
+                    <div class = "gruppoInput" style = "position: absolute; top: 15%; right: 58%">
 
                         <label for = "inputNomeUtente"> Nome </label>
                         <br>
@@ -42,7 +38,7 @@
 
                     </div>
 
-                    <div class = "gruppoInput" style = "display: inline; float: right">
+                    <div class = "gruppoInput" style = "position: absolute; top: 15%; left: 58%">
 
                         <label for = "inputCognomeUtente"> Cognome </label>
                         <br>
@@ -56,9 +52,9 @@
 
                     </div>
 
-                    <br>
+                    <br> <br>
 
-                    <div class = "gruppoInput" style = "display: inline; float: left">
+                    <div class = "gruppoInput" style = "position: absolute; top: 27%; left: 58%">
 
                         <label for = "inputEmailUtente"> Email </label>
                         <br>
@@ -72,7 +68,7 @@
 
                     </div>
 
-                    <div class = "gruppoInput" style = "display: inline; float: right">
+                    <div class = "gruppoInput" style = "position: absolute; top: 27%; right: 58%">
 
                         <label for = "inputNumeroTelefonoUtente"> Numero di telefono </label>
                         <br>    
@@ -86,7 +82,7 @@
 
                     <br>
 
-                    <div class = "gruppoInput" style = "display: inline; float: left; margin-left: -20px">
+                    <div class = "gruppoInput" style = "position: absolute; top: 39%; right: 57%">
 
                         <label for = "inputPasswordUtente"> Password </label>
                         <br>
@@ -96,11 +92,11 @@
                             <i class = "fa fa-check"> </i>
                             <i class = "far fa-eye" id = "toggleUserPassword" style = "margin-right: 15px; cursor: pointer" onclick = "togglePasswordVisibility()"> </i>
                         </div>
-                        <p id = "avvertimentoPasswordUtente" class = "avvertimenti"> </p>
+                        <p id = "avvertimentoPasswordUtente" class = "avvertimenti" style = "position: absolute; margin-top: 120px; margin-left: 10px"> </p>
                                 
                     </div>
 
-                    <div class = "gruppoInput" style = "display: inline; float: right; margin-right: -20px">
+                    <div class = "gruppoInput" style = "position: absolute; top: 39%; left: 57%">
 
                         <label for = "inputConfermaPasswordUtente"> Conferma password </label>
                         <br>                        
@@ -110,13 +106,13 @@
                             <i class = "fa fa-check"> </i>
                             <i class = "far fa-eye" id = "toggleUserConfirmPassword" style = "margin-right: 15px; cursor: pointer" onclick = "togglePasswordVisibility()"> </i>    
                         </div>
-                        <p id = "avvertimentoConfermaPasswordUtente" class = "avvertimenti"> </p>
+                        <p id = "avvertimentoConfermaPasswordUtente" class = "avvertimenti" style = "position: absolute; margin-top: 120px; margin-right: 10px"> </p>
 
                     </div>
 
                     <br>
 
-                    <div class = "gruppoInput" style = "display: inline; float: left">
+                    <div class = "gruppoInput" style = "position: absolute; top: 55%; left: 58%">
 
                         <label for = "inputCittàNascitaUtente"> Città di nascita </label>
                         <br>
@@ -130,7 +126,7 @@
 
                     </div>
 
-                    <div class = "gruppoInput" style = "display: inline; float: right">
+                    <div class = "gruppoInput" style = "position: absolute; top: 55%; right: 58%">
                         <label for = "inputViaResidenzaUtente"> Via di residenza </label>
                         <br>
                         <div class = "contenitoreInputIcona">
@@ -140,27 +136,27 @@
                         </div>
                     </div>
 
-                    <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
+                    <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
 
-                    <div class = "gruppoInput">
+                    <div class = "gruppoInput" style = "position: absolute; top: 68%; left: 40%">
 
                         <label for = "inputDataNascitaUtente"> Data di nascita </label>
                         <br>
                         <div class = "contenitoreInputIcona">
                             <i class = "fa fa-calendar inputIcon"> </i>
-                            <input type = "date" id = "inputDataNascitaUtente" name = "inputDataNascitaUtente" max = "<?php echo $todayDate?>" title = "Inserisci qui la tua data di nascita" oninvalid = "styleInputFieldError()" onchange = "checkInputFieldValidity()" required>
+                            <input type = "date" id = "inputDataNascitaUtente" name = "inputDataNascitaUtente" title = "Inserisci qui la tua data di nascita" oninvalid = "styleInputFieldError()" onchange = "checkInputFieldValidity()" required>
                             <i class = "fa fa-check"> </i>
                         </div>
 
                     </div>
 
-                    <br>
+                    <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
 
                     <div class = "gruppoInput">
 
                         <label for = "inputAccettazionePoliticaPrivacy" style = "font-size: 18px"> Accetto la politica sulla gestione della privacy </label>
                         <span class = "verySmallBr"> </span>
-                        <input type = "checkbox" id = "inputAccettazionePoliticaPrivacy" name = "inputAccettazionePoliticaPrivacy" style = "margin-left: 360px" required>
+                        <input type = "checkbox" id = "inputAccettazionePoliticaPrivacy" name = "inputAccettazionePoliticaPrivacy" style = "margin-top: 10px; margin-left: 390px" required>
 
                     </div>
 
@@ -176,10 +172,12 @@
 
                         include "connection.php";
 
+                        // Questa query permette di recuperare l'ID massimo contenuto all'interno della tabella "Utenti":
                         $maxIDQueryResult = $connection->query("SELECT MAX(ID) FROM Utenti");
-                        $IDUtente = mysqli_fetch_array($maxIDQueryResult) + 1;
+                        // Calcolo dell'ID che dovrà essere assegnato al nuovo utente da registrare all'interno del database:
+                        $IDUtente = mysqli_fetch_array($maxIDQueryResult)[0] + 1;
 
-                        // Dati inseriti dall'utente negli appositi campi input:
+                        // Dati inseriti dall'utente negli appositi campi input del form:
                         $nomeUtente = $_POST["inputNomeUtente"];
                         $cognomeUtente = $_POST["inputCognomeUtente"];
                         $emailUtente = $_POST["inputEmailUtente"];
@@ -191,22 +189,19 @@
                                 
                         $emailQueryResult = mysqli_execute_query($connection, "SELECT COUNT(Email) FROM Utenti WHERE Email = ?", [$emailUtente]);
                         $equalEmailFieldsNumber = mysqli_fetch_array($emailQueryResult)[0];
-
-                        $telephoneNumberQueryResult = mysqli_execute_query($connection, "SELECT COUNT(Telefono) FROM Utenti WHERE Telefono = ?", [$numeroTelefonoUtente]);
-                        $equalTelephoneNumberFieldsNumber = mysqli_fetch_array($telephoneNumberQueryResult)[0];
                         
-                        // Controllo dell'univocità dell'email e del numero di telefono utilizzati:
-                        if ($equalEmailFieldsNumber == 0 && $equalTelephoneNumberFieldsNumber == 0) {
-                            // Nel caso in cui l'email e il numero di telefono non siano già in uso, si può procedere alla registrazione dell'utente nel database del sito web:                   
+                        // Controllo dell'univocità dell'email utilizzata:
+                        if ($equalEmailFieldsNumber == 0) {
+                            // Nel caso in cui l'email non sia già in uso, si può procedere alla registrazione dell'utente nel database del sito web:                   
                             $statement = $connection->prepare("INSERT INTO Utenti VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)");
                             $statement->bind_param("issssssss", $IDUtente, $nomeUtente, $cognomeUtente, $emailUtente, $passwordUtente, $numeroTelefonoUtente, $cittàNascitaUtente, $viaResidenzaUtente, $dataNascitaUtente);
                             $statement->execute();
-                            echo '<br> <p class = "conferme"> Perfetto: Ti sei registrato correttamente nel nostro sito web! </p>';
+                            echo '<br> <p class = "conferme" style = "position: absolute; margin-top: 10px"> Perfetto: Ti sei registrato correttamente nel nostro sito web! </p>';
                         }
 
                         else {
-                            // Nel caso in cui l'email e/o il numero di telefono inseriti siano già in uso, la registrazione viene negata e viene stampato un messaggio di errore:
-                            echo '<br> <p class = "avvertimenti"> Attenzione: Il numero di telefono e/o l\'email inserita sono già in uso! </p>';
+                            // Nel caso in cui l'email inserita sia già in uso, la registrazione viene negata e viene stampato un messaggio di errore:
+                            echo '<br> <p class = "avvertimenti" style = "position: absolute; margin-top: 10px"> Attenzione: L\'email inserita è già in uso! </p>';
                         }
                     }
                 ?>

@@ -490,13 +490,18 @@ html.signinPage {
 }
 
 /* Stile degli elementi "body" aventi come classe la stringa "signinBody": */
-body.signinBody {
+body.signinBody, body.registrationBody {
   background-color: transparent;
   background-image: url("Images/Backgrounds/land.jpg");
   background-size: cover;
   box-sizing: border-box;
 }
 
+body.registrationBody {
+  height: 1250px;
+}
+
+/* Stile delle immagini contenute all'interno dei link inseriti nella barra di navigazione: */
 nav a img {
   cursor: pointer;
   width: 100px;
@@ -511,18 +516,19 @@ div.loginContainer, div.registrationContainer {
   border-radius: 15px;
 }
 
+/* Stile del blocco avente come classe la stringa "loginContainer" (ovvero il blocco corrispondente al contenitore più esterno, di colore nero, del form di login): */
 div.loginContainer {
   margin-top: -5%;
-  left: 40%;
-  width: 500px;
-  height: 630px;
+  left: 37%;
+  width: 630px;
+  height: 650px;
 }
 
 div.registrationContainer {
-  margin-top: -5%;
+  margin-top: -6%;
   left: 27%;
   width: 1000px;
-  height: 990px;
+  height: 1200px;
 }
 
 /* Stile dei titoli contenuti all'interno dei blocchi corrispondenti alle finestre di sign in: */
@@ -542,7 +548,8 @@ label.radioLabel {
   float: right;
 }
 
-.formPersonalizzato {
+/* Stile dei form aventi come classe la stringa "formPersonalizzato" (ovvero i form di login e registrazione): */
+form.formPersonalizzato {
   display: inline-block;
   background-color: #cc00cc;
   width: 50vw;
@@ -550,31 +557,37 @@ label.radioLabel {
   border-radius: 20px;
 }
 
+/* Stile dei form aventi come classe la stringa "formPersonalizzato" contenuti all'interno di blocchi aventi come classe la stringa "loginContainer" (ovvero il form di login): */
 div.loginContainer form.formPersonalizzato {
-  max-width: 60%;
+  max-width: 70%;
 }
 
+/* Stile dei form aventi come classe la stringa "formPersonalizzato" contenuti all'interno di blocchi aventi come classe la stringa "registrationContainer" (ovvero il form di registrazione): */
 div.registrationContainer form.formPersonalizzato {
-  max-width: 75%;
+  max-width: 80%;
 }
-  
+
+/* Stile dei blocchi aventi come classe la stringa "gruppoInput": */
 .gruppoInput {
   margin-bottom: 1rem;
   display: flex;
   flex-direction: column;
 }
 
+/* Stile delle descrizioni dei campi input contenute all'interno di blocchi aventi come classe la stringa "gruppoInput": */
 .gruppoInput label {
   color : #fff;
   font-family : tahoma;
 }
-  
+
+/* Stile degli elementi "span" contenuti all'interno di blocchi aventi come classe la stringa "gruppoInput": */
 .gruppoInput span {
   color : #888;
   font-family : tahoma;
   font-size: 11px;
 }
-  
+
+/* Stile dei blocchi aventi come classe la stringa "contenitoreInputIcona": */
 .contenitoreInputIcona {
   display: flex;
   flex-direction: row;
@@ -585,12 +598,14 @@ div.registrationContainer form.formPersonalizzato {
   align-items: center;
   overflow: hidden;
 }
-  
+
+/* Stile degli elementi aventi come classe la stringa "errore": */
 .errore {
   border: 3px solid #ff0000;
   background-color: #fdd3d3;
 }
-  
+
+/* Stile dei campi input contenuti all'interno dei blocchi aventi come classe la stringa "contenitoreInputIcona": */
 .contenitoreInputIcona input {
   outline: none;
   border: none;
@@ -603,70 +618,52 @@ div.registrationContainer form.formPersonalizzato {
   background : none;
   background-color : transperant;
 }
-  
-.contenitoreInputIcona .fa{
+
+/* Stile delle icone aventi come classe la stringa "fa" e contenute all'interno di blocchi di classe "contenitoreInputIcona": */
+.contenitoreInputIcona .fa {
   padding : 20px;
 }
 
+/* Stile delle icone aventi come classe la stringa "fa-check": */
 .fa-check {
   color: #00ff00;
 }
 
+/* Stile delle icone aventi come classe la stringa "fa-times": */
 .fa-times {
   color: #ff0000;
 }
 
+/* Stile delle icone aventi come classe la stringa "inputIcon": */
 i.inputIcon {
   color: #ffffff;
   background-color: #374669;
 }
 
+/* Stile degli input di tipo "date" (ovvero le date da inserire): */
 input[type="date"]::-webkit-calendar-picker-indicator {
   display: none;
 }
 
+/* Stile degli input di tipo "checkbox" (ovvero le caselle da spuntare): */
 input[type="checkbox"] {
   width: 20px;
   height: 20px;
 }
 
-select {
-  width: 285px;
-  height: 40px;
-  border-radius: 10px;
-  background-color: #00ff00;
-  padding: 0 15px;
-  font-size: 16px;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-select::after {
-  content: '';
-  position: absolute;
-  right: 20px;
-  top: 50%;
-  transform: translateY(-50%) rotate(45deg);
-  width: 6px;
-  height: 6px;
-  border-right: 2px solid #fff;
-  border-bottom: 2px solid #fff;
-}
-
+/* Stile comune alle icone aventi come classi le stringhe "fa" e "fa-eye" o "fa-eye-slash" al momento del passaggio del mouse: */
 .fa.fa-eye:hover, .fa.fa-eye-slash:hover {
   cursor: pointer;
 }
 
-.fa.fa-search {
-  font-size: 60px;
-}
-
+/* Stile dei paragrafi aventi come classe la stringa "avvertimenti": */
 p.avvertimenti {
   font-size: 25px;
   font-weight: bold;
   color: #ff0000;
 }
 
+/* Stile dei paragrafi aventi come classe la stringa "conferme": */
 p.conferme {
   font-size: 25px;
   font-weight: bold;
@@ -684,19 +681,18 @@ button.bottoniRegistrazione {
   box-shadow: 0 9px #666;
 }
 
-/* Classe che definisce lo stile "hover" (presenza del cursore sopra al bottone) dei bottoni utili per effettuare la registrazione di un autore, un editore o un libro all'interno del database della biblioteca: */
+/* Classe che definisce lo stile "hover" (presenza del cursore sopra al bottone) dei bottoni utili per effettuare la registrazione o il login di un utente all'interno del database: */
 button.bottoniRegistrazione:hover {
   cursor: pointer;
   background-color: #00ff00;
 }
 
-/* Classe che definisce lo stile "active" (pressione del bottone) dei bottoni utili per effettuare la registrazione di un autore, un editore o un libro all'interno del database della biblioteca: */
+/* Classe che definisce lo stile "active" (pressione del bottone) dei bottoni utili per effettuare la registrazione o il login di un utente all'interno del database: */
 button.bottoniRegistrazione:active {
   background-color: #3e8e41;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }
-
 
 /* Stile dei paragrafi di avvertimento utilizzati per comunicare all'utente eventuali errori durante la registrazione o l'accesso: */
 p.avvertimenti {
@@ -715,6 +711,165 @@ button#bottoneConfermaLogin {
 
 /* --- FINE DELLO STILE RELATIVO ALLE PAGINE "registration.PHP" E "login.PHP" ---*/
 
+/* --- INIZIO DELLO STILE RELATIVO ALLE PAGINE "tennisShop.php" E "dashboard.php": --- */
+
+/* Stile delle sezioni "article" nelle pagine "tennisShop.php" e "dashboard.php": */
+article#tennisShopArticle, article#dashboardArticle {
+  background-color: #000000;
+}
+
+/* Stile dei blocchi aventi come classe la stringa "articlesContainer" (ovvero il blocco principale contenente i vari blocchi con all'interno i diversi articoli visualizzabili dall'utente): */
+.articlesContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding-top: 50px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: #000000;
+}
+
+/* Stile dei blocchi aventi come classe la stringa "shopArticle" (ovvero i blocchi contenenti i vari articoli visualizzabili e salvabili dall'utente): */
+div.shopArticle {
+  flex: 1;
+  height: fit-content;
+  background-color: #0066cc;
+}
+
+/* Stile dei paragrafi di testo contenuti all'interno dei blocchi aventi come classe la stringa "shopArticle" (ovvero i blocchi contenenti i vari articoli visualizzabili e salvabili dall'utente)*/
+div.shopArticle p {
+  position: inherit;
+  font-size: 25px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+/* Stile delle parole evidenziate in grassetto all'interno dei paragrafi di testo contenuti nei blocchi aventi come classe la stringa "shopArticle" (ovvero i blocchi contenenti i vari articoli visualizzabili e salvabili dall'utente): */
+div.shopArticle p b {
+  color: #000000;
+}
+
+/* Stile delle immagini contenute all'interno dei blocchi aventi come classe la stringa "shopArticle" (ovvero i blocchi contenenti i vari articoli visualizzabili e salvabili dall'utente): */
+div.shopArticle img {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 200px;
+  height: 200px;
+}
+
+/*Stile dei bottoni contenuti all'interno dei blocchi aventi come classe la stringa "shopArticle" (ovvero i blocchi contenenti i vari articoli visualizzabili e salvabili dall'utente): */
+div.shopArticle button {
+  padding: 0;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  width: 100px;
+  height: 100px; 
+}
+
+/* Stile delle icone all'interno dei vari bottoni contenuti nei blocchi aventi come classe la stringa "shopArticle" (ovvero i blocchi contenenti i vari articoli visualizzabili e salvabili dall'utente): */
+div.shopArticle button i {
+  cursor: pointer;
+  font-size: 100px;
+  margin-top: -20px;
+}
+
+/* Stile delle icone aventi come classe la stringa "favourite" (ovvero le icone a forma di cuore cliccate dall'utente per aggiungere un prodotto ai preferiti): */
+i.favourite {
+  color: #ff0000;
+}
+
+/* Stile dei blocchi aventi come classe la stringa "break" (ovvero i blocchi utili per andare a capo all'interno di un blocco di classe "flexboxContainer"): */
+.break {
+  flex-basis: 100%;
+  height: 0;
+}
+
+/* Stile del blocco avente come id la stringa "dashboardLinkContainer" (ovvero il blocco presente alla fine della pagina "tennisShop.php", contenente un semplice sottotitolo e un icona con un link alla pagina "dashboard.php"): */
+div#dashboardLinkContainer {
+  height: 270px;
+}
+
+/* Stile dei sottotitoli presenti alla fine delle pagine "tennisShop.php" e "dashboard.php": */
+h2.linkHeading {
+  color: #00ff00;
+  padding-top: 20px;
+}
+
+/* Stile dell'immagine avente come id la stringa "shoppingCartIcon" (ovvero l'immagine presente alla fine della pagina "tennisShop.php", contenuta all'interno del blocco di id "dashboardLinkContainer" e all'interno di un link alla pagina "dashboard.php"): */
+img#shoppingCartIcon {
+  cursor: pointer;
+  width: 150px;
+  height: 150px;
+}
+
+/* Stile del blocco avente come id la stringa "personalInformationContainer" (ovvero il blocco presente all'inizio della pagina "dashboard.php", contenente tutte le informazioni personali inserite dall'utente al momento della registrazione, ad eccezione della password): */
+div#personalInformationContainer {
+  padding-top: 20px;
+}
+
+/* Stile dei paragrafi di testo contenuti all'interno del blocco avente come id la stringa "personalInformationContainer" (ovvero il blocco presente all'inizio della pagina "dashboard.php", contenente tutte le informazioni personali inserite dall'utente al momento della registrazione, ad eccezione della password): */
+div#personalInformationContainer p {
+  font-size: 25px;
+}
+
+/* Stile delle parole evidenziate in grassetto all'interno dei paragrafi di testo contenuti nel blocco avente come id la stringa "personalInformationContainer" (ovvero il blocco presente all'inizio della pagina "dashboard.php", contenente tutte le informazioni personali inserite dall'utente al momento della registrazione, ad eccezione della password): */
+div#personalInformationContainer p b {
+  color: #0099ff;
+}
+
+/* Stile dei bottoni aventi come classe la stringa "removeFromFavouritesButton" (ovvero i bottoni, contenuti nella pagina "dashboard.php", che permettono all'utente di rimuovere un prodotto dai preferiti): */
+button.removeFromFavouritesButton {
+  font-size: 20px;
+  font-family: monospace;
+  font-weight: bold;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  padding-left: 7px;
+  padding-right: 7px;
+  border-radius: 10px;
+  background-color: #ff0000;
+}
+
+/* Stile del blocco avente come id la stringa "emptyFavouritesButtonContainer" (ovvero il blocco, contenuto nella pagina "dashboard.php", contenente il bottone che permette all'utente di rimuovere tutti i prodotti dai preferiti contemporaneamente): */
+div#emptyFavouritesButtonContainer {
+  height: 200px;
+}
+
+/* Stile del bottone avente come id la stringa "emptyFavouritesButtonContainer" (ovvero il bottone, contenuto nella pagina "dashboard.php"), che permette all'utente di rimuovere tutti i prodotti dai preferiti contemporaneamente: */
+button#emptyFavouritesButton {
+  margin-top: 40px;
+  font-size: 30px;
+  font-family: monospace;
+  font-weight: bold;
+  border-radius: 15px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: #ff0000;
+  box-shadow: 0 9px #666;
+}
+
+/* Stile del bottone avente come id la stringa "emptyFavouritesButton" (ovvero il bottone, contenuto nella pagina "dashboard.php", contenente il bottone che permette all'utente di rimuovere tutti i prodotti dai preferiti contemporaneamente) al momento dell'attivazione: */
+button#emptyFavouritesButton:active {
+  background-color: #cc3300;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+/* Stile del blocco avente come id la stringa "onlineShopLinkContainer" (ovvero il blocco, presente alla fine della pagina "dashboard.php", contenente un semplice sottotitolo e un immagine con un link alla pagina "tennisShop.php"): */
+div#onlineShopLinkContainer {
+  position: relative;
+  margin-top: -20px;
+  height: 370px;
+}
+
+/* --- FINE DELLO STILE RELATIVO ALLE PAGINE "tennisShop.php" e "dashboard.php" ---*/
+
 /* --- INIZIO DELLO STILE DEI FOOTER DELLE PAGINE: --- */
 
 /* Stile del blocco che costituisce il footer vero e proprio: */
@@ -727,7 +882,7 @@ footer {
 /* Stile dei paragrafi semplici contenuti all'interno del footer: */
 footer p {
   font-size: 30px;
-  color: #000;
+  color: #000000;
 }
 
 /* Stile dei link contenuti all'interno del footer: */
