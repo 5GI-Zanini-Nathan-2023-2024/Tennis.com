@@ -131,8 +131,8 @@ function styleInputFieldError () {
     }
 }
 
-var path = window.location.pathname;
-var page = path.split("/").pop();
+var path = window.location.pathname;        // Variabile contenente il percorso della pagina visualizzata dall'utente.
+var page = path.split("/").pop();           // Variabile contenente il nome (compresa l'estensione) della pagina visualizzata dall'utente.
 
 // Istruzioni da eseguire nel caso in cui la pagina visualizzata dall'utente sia quella nominata "index.html":
 if (page == "index.html") {
@@ -162,6 +162,12 @@ else if (page == "dashboard.php") {
     var DASHBOARD_FIFTH_LOADING_SENTENCE = "Caricamento completato!";
 }
 
+// Funzione necessaria per nascondere tutti gli elementi all'interno dell'article della pagina per consentire la corretta visualizzazione dell'animazione della barra di caricamento:
+function hideAll () {
+    let article = document.body.getElementsByTagName("article")[0];
+    article.setAttribute("style", "display: none");
+}
+
 // Funzione utile per realizzare l'animazione associata alla barra di caricamento della pagina:
 function progressBarAnimation () {
     
@@ -175,54 +181,71 @@ function progressBarAnimation () {
 
     let firstLoadingSentence, secondLoadingSentence, thirdLoadingSentence, fourthLoadingSentence, fifthLoadingSentence;
 
+    // Istruzioni da eseguire nel caso in cui la pagina visualizzata dall'utente sia "tennisShop.php":
     if (page == "tennisShop.php") {
-        firstLoadingSentence = SHOP_FIRST_LOADING_SENTENCE;
-        secondLoadingSentence = SHOP_SECOND_LOADING_SENTENCE;
-        thirdLoadingSentence = SHOP_THIRD_LOADING_SENTENCE;
-        fourthLoadingSentence = SHOP_FOURTH_LOADING_SENTENCE;
-        fifthLoadingSentence = SHOP_FIFTH_LOADING_SENTENCE;
+        firstLoadingSentence = SHOP_FIRST_LOADING_SENTENCE;             // Prima frase di descrizione della barra di caricamento della pagina.
+        secondLoadingSentence = SHOP_SECOND_LOADING_SENTENCE;           // Seconda frase di descrizione della barra di caricamento della pagina.
+        thirdLoadingSentence = SHOP_THIRD_LOADING_SENTENCE;             // Terza frase di descrizione della barra di caricamento della pagina.
+        fourthLoadingSentence = SHOP_FOURTH_LOADING_SENTENCE;           // Quarta frase di descrizione della barra di caricamento della pagina.
+        fifthLoadingSentence = SHOP_FIFTH_LOADING_SENTENCE;             // Quinta ed ultima frase di descrizione della barra di caricamento della pagina.
     }
 
+    // Istruzioni da eseguire nel caso in cui la pagina visualizzata dall'utente sia "dashboard.php":
     else if (page == "dashboard.php") {
-        firstLoadingSentence = DASHBOARD_FIRST_LOADING_SENTENCE;
-        secondLoadingSentence = DASHBOARD_SECOND_LOADING_SENTENCE;
-        thirdLoadingSentence = DASHBOARD_THIRD_LOADING_SENTENCE;
-        fourthLoadingSentence = DASHBOARD_FOURTH_LOADING_SENTENCE;
-        fifthLoadingSentence = DASHBOARD_FIFTH_LOADING_SENTENCE;
+        firstLoadingSentence = DASHBOARD_FIRST_LOADING_SENTENCE;        // Prima frase di descrizione della barra di caricamento della pagina.
+        secondLoadingSentence = DASHBOARD_SECOND_LOADING_SENTENCE;      // Seconda frase di descrizione della barra di caricamento della pagina.
+        thirdLoadingSentence = DASHBOARD_THIRD_LOADING_SENTENCE;        // Terza frase di descrizione della barra di caricamento della pagina.
+        fourthLoadingSentence = DASHBOARD_FOURTH_LOADING_SENTENCE;      // Quarta frase di descrizione della barra di caricamento della pagina.
+        fifthLoadingSentence = DASHBOARD_FIFTH_LOADING_SENTENCE;        // Quinta ed ultima frase di descrizione della barra di caricamento della pagina.
     }
 
+    // Switch case in base allo stato di avanzamento della barra di caricamento della pagina:
     switch (newProgressBarWidth) {
 
+        // La barra di caricamento della pagina ha raggiunto il 20%:
         case 20:
             document.getElementById("progressBarDescription").innerHTML = firstLoadingSentence;
             break;
             
+        // La barra di caricamento della pagina ha raggiunto il 40%:
         case 40:
             document.getElementById("progressBarDescription").innerHTML = secondLoadingSentence;
             break;
 
+        // La barra di caricamento della pagina ha raggiunto il 60%:
         case 60:
             document.getElementById("progressBarDescription").innerHTML = thirdLoadingSentence;
             break;
 
+        // La barra di caricamento della pagina ha raggiunto l'80%:
         case 80:
             document.getElementById("progressBarDescription").innerHTML = fourthLoadingSentence;
             break;
 
+        // La barra di caricamento della pagina ha raggiunto il 100%:
         case 100:
             document.getElementById("progressBarDescription").innerHTML = fifthLoadingSentence;
-            window.clearInterval(progressBarAnimationSetInterval);
-            setTimeout(clearPage, 1500);
+            window.clearInterval(progressBarAnimationSetInterval);      // Interruzione dell'invocazione periodica della funzione "progressBarAnimation".
+            setTimeout(clearPage, 1000);                                // Invocazione della funzione "clearPage" con un ritardo di 1000 millisecondi (ovvero 1 secondo).
     }
 }
 
-// Funzione richiamata alla fine dell'animazione associata alla barra di avanzamento per eliminare quest'ultima e la relativa descrizione:
+// Funzione richiamata alla fine dell'animazione associata alla barra di avanzamento per eliminare quest'ultima e la relativa descrizione e mostrare tutti gli elementi precedentemente nascosti per consentire l'animazione:
 function clearPage () {
     document.getElementById("progressBarContainerDiv").remove();
     document.getElementById("progressBarDescription").remove();
+    viewAll();
 }
 
-/* Funzione utile per assegnare gli attributi identificativi "id" e "name" ai : */
+// Funzione necessaria per riattivare la visualizzazione di tutti gli elementi contenuti all'interno dell'article della pagina dopo l'animazione della barra di caricamento:
+function viewAll () {
+    let article = document.body.querySelector("article");   // Estrapolazione dell'elemento "article" dalla pagina.
+    let footer = document.body.querySelector("footer");     // Estrapolazione dell'elemento "footer" dalla pagina.
+    article.setAttribute("style", "display: block");        // Visualizzazione dell'elemento "article".
+    footer.setAttribute("style", "display: block");         // Visualizzazione dell'elemento "footer".
+}
+
+/* Funzione utile per assegnare gli attributi identificativi "id" e "name" ai vari bottoni utilizzabili dall'utente per aggiungere o rimuovere un prodotto dai preferiti: */
 function assignIds (className, productCodes) {
 
     let querySelectorAllparameter = "." + className;
@@ -250,6 +273,6 @@ function addToFavourites (addToFavouritesIconClicked) {
 
 /* Funzione utile per rimuovere dalla pagina "dashboard.php" la sezione contenente gli articoli salvati nei preferiti e il bottone utile per rimuovere tutti gli articoli salvati non appena l'utente preme quest'ultimo pulsante: */
 function emptyFavourites () {
-    document.getElementById("articlesContainer").remove();
-    document.getElementById("emptyFavouritesButton").remove();
+    document.getElementById("articlesContainer").remove();          // Eliminazione dell'elemento con id "articlesContainer" (ovvero il contenitore di tutti i prodotti dello shop visualizzabili e salvabili dall'utente) dalla pagina.
+    document.getElementById("emptyFavouritesButton").remove();      // Eliminazione dell'elemento con id "emptyFavouritesButton" (ovvero il bottone utile per permettere all'utente di rimuovere contemporaneamnete tutti i prodotti dai preferiti) dalla pagina.
 }

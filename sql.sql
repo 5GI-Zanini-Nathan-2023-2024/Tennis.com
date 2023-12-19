@@ -1,13 +1,13 @@
--- Creazione del database "TennisWebsite": --
+-- Creazione del database "TennisWebsite":
 CREATE DATABASE Tennis;
 
--- Utilizzo del database "TennisWebsite" per le successive operazioni: ---
+-- Utilizzo del database "TennisWebsite" per le successive operazioni:
 USE Tennis;
 
--- Creazione della tabella "Utenti": --
+-- Creazione della tabella "Utenti" (utile per memorizzare le informazioni relative a tutti gli utenti del sito web):
 CREATE TABLE Utenti (
 	Email varchar(319) NOT NULL PRIMARY KEY,
-	Password BINARY(64) NOT NULL,
+	Password varchar(128) NOT NULL,
 	Nome varchar(20) NOT NULL,
 	Cognome varchar(20) NOT NULL,
 	Telefono char(10) NOT NULL,
@@ -16,7 +16,7 @@ CREATE TABLE Utenti (
 	Nascita DATE NOT NULL
 );
 
--- Creazione della tabella "Prodotti":
+-- Creazione della tabella "Prodotti" (utile per memorizzare tutti i vari prodotti visualizzabili e salvabili dall'utente nello shop):
 CREATE TABLE Prodotti (
 	Codice INT(10) ZEROFILL PRIMARY KEY,
 	Nome varchar(100) NOT NULL,
@@ -27,26 +27,28 @@ CREATE TABLE Prodotti (
 	Immagine varchar(100)
 );
 
+-- Creazione della tabella "Salvataggi" (utile per tenere traccia dei prodotti dello shop salvati dall'utente):
 CREATE TABLE Salvataggi (
 	EmailUtente varchar(319),
 	CodiceProdotto INT(10) ZEROFILL,
 	PRIMARY KEY (EmailUtente, CodiceProdotto)
 );
 
--- Popolamento della tabella "Utenti": --
+-- Popolamento della tabella "Utenti":
 INSERT INTO Utenti
 	VALUES
-		("19636@studenti.marconiverona.edu.it", SHA2("Password123", 512), "Nathan", "Zanini", "3888284489", "Verona", "Via Udino Bombieri 18/A", "2005-12-12"),
-		("luca.rossi@gmail.com", SHA2("P@ssword123", 512), "Luca", "Rossi", "3125673267", "Roma", "Via Roma 10", "1980-01-10"),
-		("sofia.bianchi@gmail.com", SHA2("Passw0rd123", 512), "Sofia", "Bianchi", "3432257854", "Milano", "Via Milano 20", "1985-02-20"),
-		("marco.russo@gmail.com", SHA2("P@ssw0rd123", 512), "Marco", "Russo", "3764218912", "Firenze", "Via Firenze 40", "1990-03-30"),
-		("francesco.esposito@gmail.com", SHA2("P@6sw0rd123", 512), "Francesco", "Esposito", "3987635521", "Palermo", "Via Palermo 50", "1995-05-20"),
-		("valentina.conti@gmail.com", SHA2("P@66w0rd123", 512), "Valentina", "Conti", "3987648392", "Torino", "Via Torino 60", "1993-06-30"),
-		("alessandro.marini@gmail.com", SHA2("P@66w03d123", 512), "Alessandro", "Marini", "3874859212", "Bologna", "Via Bologna 80", "1992-08-20"),
-		("elena.gentile@gmail.com", SHA2("Password123!", 512), "Elena", "Gentile", "3976543678", "Venezia", "Via Venezia 90", "1997-09-30"),
-		("giovanni.caruso@gmail.com", SHA2("Password321", 512), "Giovanni", "Caruso", "3566432674", "Cosenza", "Via Cosenza 10", "1997-09-09"),
-		("giorgia.ferrari@gmail.com", SHA2("Password213", 512), "Giorgia", "Ferrari", "3865930029", "Potenza", "Via Potenza 30", "1992-08-08");
+		("19636@studenti.marconiverona.edu.it", "Password123", "Nathan", "Zanini", "3888284489", "Verona", "Via Udino Bombieri 18/A", "2005-12-12"),
+		("luca.rossi@gmail.com", "P@ssword123", "Luca", "Rossi", "3125673267", "Roma", "Via Roma 10", "1980-01-10"),
+		("sofia.bianchi@gmail.com", "Passw0rd123", "Sofia", "Bianchi", "3432257854", "Milano", "Via Milano 20", "1985-02-20"),
+		("marco.russo@gmail.com", "P@ssw0rd123", "Marco", "Russo", "3764218912", "Firenze", "Via Firenze 40", "1990-03-30"),
+		("francesco.esposito@gmail.com", "P@6sw0rd123", "Francesco", "Esposito", "3987635521", "Palermo", "Via Palermo 50", "1995-05-20"),
+		("valentina.conti@gmail.com", "P@66w0rd123", "Valentina", "Conti", "3987648392", "Torino", "Via Torino 60", "1993-06-30"),
+		("alessandro.marini@gmail.com", "P@66w03d123", "Alessandro", "Marini", "3874859212", "Bologna", "Via Bologna 80", "1992-08-20"),
+		("elena.gentile@gmail.com", "Password123!", "Elena", "Gentile", "3976543678", "Venezia", "Via Venezia 90", "1997-09-30"),
+		("giovanni.caruso@gmail.com", "Password321", "Giovanni", "Caruso", "3566432674", "Cosenza", "Via Cosenza 10", "1997-09-09"),
+		("giorgia.ferrari@gmail.com", "Password213", "Giorgia", "Ferrari", "3865930029", "Potenza", "Via Potenza 30", "1992-08-08");
 
+-- Popolamento della tabella "Prodotti":
 INSERT INTO Prodotti
 	VALUES
 		(1, "Racchetta tennis adulto Head CHALLENGE ELITE LITE", "Head", "Questa racchetta è stata ideata per il tennista di livello principiante che cerca una racchetta leggera e confortevole. Leggera, offre una buona maneggevolezza, e il piatto corde grande aiuta ad avere potenza. Un'ottima racchetta per i principianti e coloro che sono alle prime armi!", 260, 9.99, "Images/Products/headRacket.png"),
@@ -71,6 +73,7 @@ INSERT INTO Prodotti
 		(20, "Borsa PURE 9 racchette azzurra", "Babolat", "Prodotto ideato per il tennista esperto che cerca una borsa che lo segua nella pratica intensa. La borsa BABOLAT RH PURE azzurra ha diverse tasche, di cui una isotermica, per trasportare fino a 9 racchette. Sono presenti delle tasche ventilate per le scarpe e la biancheria.", 2575, 64.99, "Images/Products/babolatBag.png"),
 		(21, "Overgrip tennis COMFORT giallo x3", "Artengo", "I nostri ideatori hanno sviluppato questo prodotto per il tennista che cerca un overgrip confortevole e aderente. Overgrip da tennis facile da aderire sul manico, permettendo un ottimo comfort di gioco. Migliora la presa sulla racchetta da tennis e la ventilazione.", 30, 4.99, "Images/Products/artengoOvergrip.png");
 
+/* Popolamento della tabella "Salvataggi": */
 INSERT INTO Salvataggi
 	VALUES 
 	("19636@studenti.marconiverona.edu.it", 2), ("19636@studenti.marconiverona.edu.it", 6), ("19636@studenti.marconiverona.edu.it", 7), ("19636@studenti.marconiverona.edu.it", 12), ("19636@studenti.marconiverona.edu.it", 15), ("19636@studenti.marconiverona.edu.it", 19),

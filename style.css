@@ -482,6 +482,10 @@ div.flip-card-back {
 
 /* --- FINE DELLO STILE DELLE CARTE CAPOVOLGIBILI --- */
 
+div#onlineShopPresentationDiv {
+  height: 450px;
+}
+
 /* --- INIZIO DELLO STILE RELATIVO ALLE PAGINE "login.PHP" E "registration.PHP": --- */
 
 /* Stile degli elementi "html" aventi come classe la stringa "signinPage": */
@@ -490,14 +494,20 @@ html.signinPage {
 }
 
 /* Stile degli elementi "body" aventi come classe la stringa "signinBody": */
-body.signinBody, body.registrationBody {
+body#signinBody, body#registrationBody {
   background-color: transparent;
-  background-image: url("Images/Backgrounds/land.jpg");
   background-size: cover;
   box-sizing: border-box;
 }
 
-body.registrationBody {
+/* Stile dell'elemento "body" della pagina di login ("login.php"): */
+body#signinBody {
+  background-image: url("Images/General/grassCourtFromAbove.jpg");
+}
+
+/* Stile dell'elemento "body" della pagina di registrazione ("registration.php"): */
+body#registrationBody {
+  background-image: url("Images/General/stadium.jpg");
   height: 1250px;
 }
 
@@ -509,22 +519,24 @@ nav a img {
 }
 
 /* Stile comune ad entrambi i blocchi corrispondenti ai contenitori dei form di login e registrazione: */
-div.loginContainer, div.registrationContainer {
+div#loginContainer, div#registrationContainer {
   position: relative;
   text-align: center;
-  background-color: #000;
   border-radius: 15px;
 }
 
-/* Stile del blocco avente come classe la stringa "loginContainer" (ovvero il blocco corrispondente al contenitore più esterno, di colore nero, del form di login): */
-div.loginContainer {
-  margin-top: -5%;
-  left: 37%;
+/* Stile del blocco avente come id la stringa "loginContainer" (ovvero il blocco corrispondente al contenitore più esterno, di colore giallo, del form di login): */
+div#loginContainer {
+  background-color: #FEE715;
+  margin-top: 0%;
+  left: 35%;
   width: 630px;
   height: 650px;
 }
 
-div.registrationContainer {
+/* Stile del blocco avente come id la stringa "registrationContainer" (ovvero il blocco corrispondente al contenitore più esterno, di colore rosso, del form di registrazione): */
+div#registrationContainer {
+  background-color: #ff0000;
   margin-top: -6%;
   left: 27%;
   width: 1000px;
@@ -532,9 +544,10 @@ div.registrationContainer {
 }
 
 /* Stile dei titoli contenuti all'interno dei blocchi corrispondenti alle finestre di sign in: */
-div.loginContainer h2, div.registrationContainer h2 {
+div#loginContainer h2, div#registrationContainer h2 {
   font-size: 50px;
-  color: #4CAF50;
+  font-family: sans-serif;
+  color: #101820;
 }
 
 /* Stile delle descrizioni affiancate ai campi input contenuti nelle pagine di registrazione ("registrazioneUtente.php", "registrazioneAutore.php", "registrazioneEditore.php" e "registrazioneLibro.php") e ricerca ("ricercaPerAutore.php", "ricercaPerEditore.php" e "ricercaPerAttributi.php"): */
@@ -551,19 +564,20 @@ label.radioLabel {
 /* Stile dei form aventi come classe la stringa "formPersonalizzato" (ovvero i form di login e registrazione): */
 form.formPersonalizzato {
   display: inline-block;
-  background-color: #cc00cc;
   width: 50vw;
   padding: 2rem 4rem;
   border-radius: 20px;
 }
 
 /* Stile dei form aventi come classe la stringa "formPersonalizzato" contenuti all'interno di blocchi aventi come classe la stringa "loginContainer" (ovvero il form di login): */
-div.loginContainer form.formPersonalizzato {
+div#loginContainer form.formPersonalizzato {
+  background-color: #101820;
   max-width: 70%;
 }
 
 /* Stile dei form aventi come classe la stringa "formPersonalizzato" contenuti all'interno di blocchi aventi come classe la stringa "registrationContainer" (ovvero il form di registrazione): */
-div.registrationContainer form.formPersonalizzato {
+div#registrationContainer form.formPersonalizzato {
+  background-color: #0000ff;
   max-width: 80%;
 }
 
@@ -576,8 +590,8 @@ div.registrationContainer form.formPersonalizzato {
 
 /* Stile delle descrizioni dei campi input contenute all'interno di blocchi aventi come classe la stringa "gruppoInput": */
 .gruppoInput label {
-  color : #fff;
-  font-family : tahoma;
+  color: #fff;
+  font-family: tahoma;
 }
 
 /* Stile degli elementi "span" contenuti all'interno di blocchi aventi come classe la stringa "gruppoInput": */
@@ -607,14 +621,13 @@ div.registrationContainer form.formPersonalizzato {
 
 /* Stile dei campi input contenuti all'interno dei blocchi aventi come classe la stringa "contenitoreInputIcona": */
 .contenitoreInputIcona input {
+  max-width : 250px;
   outline: none;
   border: none;
   background: none;
-  font-size: 1em;
+  font-size: 20px;
   padding: .5em;
   color: inherit;
-  flex : auto 1 1;
-  width : 100%;
   background : none;
   background-color : transperant;
 }
@@ -671,24 +684,24 @@ p.conferme {
 }
 
 /* Classe che definisce lo stile dei bottoni utili per effettuare la registrazione di un autore, un editore o un libro all'interno del database della biblioteca: */
-button.bottoniRegistrazione {
+button.bottoniInvioForm {
   font-family: monospace;
   font-size: 30px;
   font-weight: bold;
-  background-color: #00ffff;
+  background-color: #00ff00;
   border-radius: 10px;
   padding: 10px;
   box-shadow: 0 9px #666;
 }
 
 /* Classe che definisce lo stile "hover" (presenza del cursore sopra al bottone) dei bottoni utili per effettuare la registrazione o il login di un utente all'interno del database: */
-button.bottoniRegistrazione:hover {
+button.bottoniInvioForm:hover {
   cursor: pointer;
   background-color: #00ff00;
 }
 
 /* Classe che definisce lo stile "active" (pressione del bottone) dei bottoni utili per effettuare la registrazione o il login di un utente all'interno del database: */
-button.bottoniRegistrazione:active {
+button.bottoniInvioForm:active {
   background-color: #3e8e41;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
@@ -823,15 +836,17 @@ div#personalInformationContainer p b {
 
 /* Stile dei bottoni aventi come classe la stringa "removeFromFavouritesButton" (ovvero i bottoni, contenuti nella pagina "dashboard.php", che permettono all'utente di rimuovere un prodotto dai preferiti): */
 button.removeFromFavouritesButton {
-  font-size: 20px;
-  font-family: monospace;
-  font-weight: bold;
-  padding-top: 7px;
-  padding-bottom: 7px;
-  padding-left: 7px;
-  padding-right: 7px;
-  border-radius: 10px;
-  background-color: #ff0000;
+  width: 300px !important;
+  height: 50px !important;
+  font-size: 23px !important;
+  font-family: monospace !important;
+  font-weight: bold !important;
+  padding-top: 7px !important;
+  padding-bottom: 7px !important;
+  padding-left: 7px !important;
+  padding-right: 7px !important;
+  border-radius: 10px !important;
+  background-color: #ff0000 !important;
 }
 
 /* Stile del blocco avente come id la stringa "emptyFavouritesButtonContainer" (ovvero il blocco, contenuto nella pagina "dashboard.php", contenente il bottone che permette all'utente di rimuovere tutti i prodotti dai preferiti contemporaneamente): */
@@ -876,6 +891,7 @@ div#onlineShopLinkContainer {
 footer {
   text-align: center;
   background-color: #fff;
+  width: 100%;
   height: 150px;
 }
 

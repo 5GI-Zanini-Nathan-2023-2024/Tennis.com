@@ -10,7 +10,7 @@
         <script src = "javascript.js"> </script>
     </head>
 
-    <body class = "registrationBody">
+    <body id = "registrationBody">
 
         <nav>
             <a href = "./index.html"><img src = "Icons/General/home.ico"></a>
@@ -18,13 +18,13 @@
 
         <section class = "signinSection">
 
-            <div class = "registrationContainer">
+            <div id = "registrationContainer">
 
-                <h2 style = "padding-top: 30px">Registrati</h2>
+                <h2 style = "padding-top: 30px">REGISTRATI</h2>
 
-                <form id = "formRegistrazioneUtente" class = "formPersonalizzato" action = "registration.php" method = "POST">
+                <form id = "formRegistrazioneUtente" class = "formPersonalizzato" method = "POST" action = "registration.php">
 
-                    <div class = "gruppoInput" style = "position: absolute; top: 15%; right: 58%">
+                    <div class = "gruppoInput" style = "position: absolute; top: 15%; right: 55%">
 
                         <label for = "inputNomeUtente"> Nome </label>
                         <br>
@@ -38,7 +38,7 @@
 
                     </div>
 
-                    <div class = "gruppoInput" style = "position: absolute; top: 15%; left: 58%">
+                    <div class = "gruppoInput" style = "position: absolute; top: 15%; left: 55%">
 
                         <label for = "inputCognomeUtente"> Cognome </label>
                         <br>
@@ -54,7 +54,7 @@
 
                     <br> <br>
 
-                    <div class = "gruppoInput" style = "position: absolute; top: 27%; left: 58%">
+                    <div class = "gruppoInput" style = "position: absolute; top: 27%; left: 55%">
 
                         <label for = "inputEmailUtente"> Email </label>
                         <br>
@@ -68,7 +68,7 @@
 
                     </div>
 
-                    <div class = "gruppoInput" style = "position: absolute; top: 27%; right: 58%">
+                    <div class = "gruppoInput" style = "position: absolute; top: 27%; right: 55%">
 
                         <label for = "inputNumeroTelefonoUtente"> Numero di telefono </label>
                         <br>    
@@ -82,29 +82,29 @@
 
                     <br>
 
-                    <div class = "gruppoInput" style = "position: absolute; top: 39%; right: 57%">
+                    <div class = "gruppoInput" style = "position: absolute; top: 39%; right: 55%; width: 380px">
 
                         <label for = "inputPasswordUtente"> Password </label>
                         <br>
                         <div class = "contenitoreInputIcona">
                             <i class = "fa fa-key inputIcon"> </i>
                             <input type = "password" id = "inputPasswordUtente" name = "inputPasswordUtente" pattern = "(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title = "La password deve contenere almeno 8 caratteri, una lettera maiuscola, una minuscola ed un numero" oninvalid = "styleInputFieldError()" onchange = "checkInputFieldValidity()" placeholder = "Password" oninput = "checkPasswordsEquality()" required>
-                            <i class = "fa fa-check"> </i>
-                            <i class = "far fa-eye" id = "toggleUserPassword" style = "margin-right: 15px; cursor: pointer" onclick = "togglePasswordVisibility()"> </i>
+                            <i class = "fa fa-check" style = "position: absolute; right: 9%"> </i>
+                            <i class = "far fa-eye" id = "toggleUserPassword" style = "position: absolute; right: 6%; cursor: pointer" onclick = "togglePasswordVisibility()"> </i>
                         </div>
                         <p id = "avvertimentoPasswordUtente" class = "avvertimenti" style = "position: absolute; margin-top: 120px; margin-left: 10px"> </p>
                                 
                     </div>
 
-                    <div class = "gruppoInput" style = "position: absolute; top: 39%; left: 57%">
+                    <div class = "gruppoInput" style = "position: absolute; top: 39%; left: 55%; width: 380px">
 
                         <label for = "inputConfermaPasswordUtente"> Conferma password </label>
                         <br>                        
                         <div class = "contenitoreInputIcona">
                             <i class = "fa fa-key inputIcon"> </i>    
                             <input type = "password" id = "inputConfermaPasswordUtente" name = "inputConfermaPasswordUtente" pattern = "(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title = "La password deve contenere almeno 8 caratteri, una lettera maiuscola, una minuscola ed un numero" oninvalid = "styleInputFieldError()" onchange = "checkInputFieldValidity()" placeholder = "Conferma password" oninput = "checkPasswordsEquality()" required>
-                            <i class = "fa fa-check"> </i>
-                            <i class = "far fa-eye" id = "toggleUserConfirmPassword" style = "margin-right: 15px; cursor: pointer" onclick = "togglePasswordVisibility()"> </i>    
+                            <i class = "fa fa-check" style = "position: absolute; right: 9%"> </i>
+                            <i class = "far fa-eye" id = "toggleUserConfirmPassword" style = "position: absolute; right: 6%; cursor: pointer" onclick = "togglePasswordVisibility()"> </i>    
                         </div>
                         <p id = "avvertimentoConfermaPasswordUtente" class = "avvertimenti" style = "position: absolute; margin-top: 120px; margin-right: 10px"> </p>
 
@@ -112,7 +112,7 @@
 
                     <br>
 
-                    <div class = "gruppoInput" style = "position: absolute; top: 55%; left: 58%">
+                    <div class = "gruppoInput" style = "position: absolute; top: 55%; left: 55%">
 
                         <label for = "inputCittàNascitaUtente"> Città di nascita </label>
                         <br>
@@ -126,7 +126,7 @@
 
                     </div>
 
-                    <div class = "gruppoInput" style = "position: absolute; top: 55%; right: 58%">
+                    <div class = "gruppoInput" style = "position: absolute; top: 55%; right: 55%">
                         <label for = "inputViaResidenzaUtente"> Via di residenza </label>
                         <br>
                         <div class = "contenitoreInputIcona">
@@ -138,7 +138,7 @@
 
                     <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
 
-                    <div class = "gruppoInput" style = "position: absolute; top: 68%; left: 40%">
+                    <div class = "gruppoInput" style = "position: absolute; top: 68%; left: 36.5%">
 
                         <label for = "inputDataNascitaUtente"> Data di nascita </label>
                         <br>
@@ -154,7 +154,7 @@
 
                     <div class = "gruppoInput">
 
-                        <label for = "inputAccettazionePoliticaPrivacy" style = "font-size: 18px"> Accetto la politica sulla gestione della privacy </label>
+                        <label for = "inputAccettazionePoliticaPrivacy" style = "font-size: 18px"> Accetto la politica di gestione della privacy </label>
                         <span class = "verySmallBr"> </span>
                         <input type = "checkbox" id = "inputAccettazionePoliticaPrivacy" name = "inputAccettazionePoliticaPrivacy" style = "margin-top: 10px; margin-left: 390px" required>
 
@@ -162,7 +162,7 @@
 
                     <br>
 
-                    <button type = "submit" id = "bottoneRegistrazioneUtente" name = "bottoneRegistrazioneUtente" class = "bottoniRegistrazione"> Registrazione </button>
+                    <button type = "submit" id = "bottoneRegistrazioneUtente" name = "bottoneRegistrazioneUtente" class = "bottoniInvioForm"> Registrazione </button>
 
                 </form>
 
@@ -170,38 +170,34 @@
 
                     if (!empty($_POST)) {
 
-                        include "connection.php";
-
-                        // Questa query permette di recuperare l'ID massimo contenuto all'interno della tabella "Utenti":
-                        $maxIDQueryResult = $connection->query("SELECT MAX(ID) FROM Utenti");
-                        // Calcolo dell'ID che dovrà essere assegnato al nuovo utente da registrare all'interno del database:
-                        $IDUtente = mysqli_fetch_array($maxIDQueryResult)[0] + 1;
+                        include "connection.php";       // Importazione del file "connection.php" utile per permettere la connessione al database.
 
                         // Dati inseriti dall'utente negli appositi campi input del form:
-                        $nomeUtente = $_POST["inputNomeUtente"];
-                        $cognomeUtente = $_POST["inputCognomeUtente"];
-                        $emailUtente = $_POST["inputEmailUtente"];
-                        $passwordUtente = $_POST["inputPasswordUtente"];
-                        $numeroTelefonoUtente = $_POST["inputNumeroTelefonoUtente"];
-                        $cittàNascitaUtente = $_POST["inputCittàNascitaUtente"];
-                        $viaResidenzaUtente = $_POST["inputViaResidenzaUtente"];
-                        $dataNascitaUtente = $_POST["inputDataNascitaUtente"];
+                        $nomeUtente = $_POST["inputNomeUtente"];                            // Nome dell'utente.
+                        $cognomeUtente = $_POST["inputCognomeUtente"];                      // Cognome dell'utente.
+                        $emailUtente = $_POST["inputEmailUtente"];                          // Indirizzo email dell'utente.
+                        $passwordUtente = $_POST["inputPasswordUtente"];                    // Password scelta dall'utente.
+                        $numeroTelefonoUtente = $_POST["inputNumeroTelefonoUtente"];        // Conferma della password scelta.
+                        $cittàNascitaUtente = $_POST["inputCittàNascitaUtente"];            // Città di nascita dell'utente.
+                        $viaResidenzaUtente = $_POST["inputViaResidenzaUtente"];            // Via di residenza dell'utente.
+                        $dataNascitaUtente = $_POST["inputDataNascitaUtente"];              // Data di nascita dell'utente.
                                 
-                        $emailQueryResult = mysqli_execute_query($connection, "SELECT COUNT(Email) FROM Utenti WHERE Email = ?", [$emailUtente]);
-                        $equalEmailFieldsNumber = mysqli_fetch_array($emailQueryResult)[0];
+                        $emailQueryResult = mysqli_execute_query($connection, "SELECT COUNT(Email) FROM Utenti WHERE Email = ?", [$emailUtente]);       // Query utile per ottenere il numero di righe del database aventi come email la stringa contenuta all'interno della variabile "$userEmail" (ovvero l'email inserita dall'utente nell'apposito campo input del form): tale numero potrà essere pari solamente a 0, nel caso in cui l'email inserita dall'utente non sia ancora registrata nel database, oppure a 1 (nel caso in cui essa sia già in uso), dal momento che tale informazione costituisce la chiave primaria della tabella "Utenti" del database.
+                        $equalEmailFieldsNumber = mysqli_fetch_array($emailQueryResult)[0];                                                             // Assegnazione del numero ottenuto dalla query "$emailQueryResult" (ovvero 1 o 0, a seconda che l'email dell'utente sia o non sia già registrata all'interno del database) alla variabile "$equalEmailFieldsNumber".
                         
                         // Controllo dell'univocità dell'email utilizzata:
                         if ($equalEmailFieldsNumber == 0) {
                             // Nel caso in cui l'email non sia già in uso, si può procedere alla registrazione dell'utente nel database del sito web:                   
-                            $statement = $connection->prepare("INSERT INTO Utenti VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)");
-                            $statement->bind_param("issssssss", $IDUtente, $nomeUtente, $cognomeUtente, $emailUtente, $passwordUtente, $numeroTelefonoUtente, $cittàNascitaUtente, $viaResidenzaUtente, $dataNascitaUtente);
-                            $statement->execute();
-                            echo '<br> <p class = "conferme" style = "position: absolute; margin-top: 10px"> Perfetto: Ti sei registrato correttamente nel nostro sito web! </p>';
+                            $statement = $connection->prepare("INSERT INTO Utenti VALUES (?, ?, ?, ?, ?, ?, ?, ?)");        // Preparazione della query di inserimento da eseguire sul database (utile per registrare un nuovo utente all'interno di esso). 
+                            $statement->bind_param("ssssssss", $emailUtente, $passwordUtente, $nomeUtente, $cognomeUtente, $numeroTelefonoUtente, $cittàNascitaUtente, $viaResidenzaUtente, $dataNascitaUtente);        // Bind dei parametri (corrispondenti alle credenziali inserite dall'utente negli appositi campi input del form) per evitare attacchi di tipo "SQL Injection".
+                            $statement->execute();      // Esecuzione vera e propria della query appositamente preparata.
+                            echo '<br><p class = "conferme" style = "font-size: 35px; position: absolute; margin-top: 24px"> Perfetto: Ti sei registrato correttamente nel nostro sito web!</p>';  // Creazione di un paragrafo di conferma utile per informare l'utente che la registrazione è avvenuta correttamente.
                         }
 
+                        // Caso in cui l'email è già in uso (ovvero la query eseguita ha restituito 1 riga):
                         else {
                             // Nel caso in cui l'email inserita sia già in uso, la registrazione viene negata e viene stampato un messaggio di errore:
-                            echo '<br> <p class = "avvertimenti" style = "position: absolute; margin-top: 10px"> Attenzione: L\'email inserita è già in uso! </p>';
+                            echo '<br><p class = "avvertimenti" style = "position: absolute; margin-top: 20px"> Attenzione: L\'email inserita è già in uso!</p>';     // Creazione di un paragrafo di errore utile per informare l'utente che la registrazione non è andata a buon fine.
                         }
                     }
                 ?>
