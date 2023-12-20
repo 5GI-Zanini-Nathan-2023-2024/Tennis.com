@@ -197,7 +197,7 @@
                         // Caso in cui l'email è già in uso (ovvero la query eseguita ha restituito 1 riga):
                         else {
                             // Nel caso in cui l'email inserita sia già in uso, la registrazione viene negata e viene stampato un messaggio di errore:
-                            echo '<br><p class = "avvertimenti" style = "position: absolute; margin-top: 20px"> Attenzione: L\'email inserita è già in uso!</p>';     // Creazione di un paragrafo di errore utile per informare l'utente che la registrazione non è andata a buon fine.
+                            echo '<br><p class = "avvertimenti" style = "position: absolute; margin-top: 20px; color: #ffffff"> Attenzione: L\'email inserita è già in uso!</p>';     // Creazione di un paragrafo di errore utile per informare l'utente che la registrazione non è andata a buon fine.
                         }
                     }
                 ?>

@@ -24,7 +24,7 @@
 
                 <form id = "formLoginUtente" class = "formPersonalizzato" action = "login.php" method = "POST">
 
-                    <div class = "gruppoInput">
+
 
                     <div class = "gruppoInput">
 
@@ -106,15 +106,16 @@
                                 // Caso in cui la password inserita dall'utente non corrisponde all'hash memorizzato nel database:
                                 else {
                                     // La registrazione viene negata e viene mostrato un messaggio di errore:
-                                    echo '<p class = "avvertimenti" style = "margin-top: 440px"> Attenzione: Le credenziali inserite sono errate!</p>';         // Creazione di un paragrafo di avvertimento utile per informare l'utente che le credenziali inserite sono errate.
+                                    echo '<p class = "avvertimenti" font-size: 45px; style = "margin-top: 25px"> Attenzione: Le credenziali inserite sono errate!</p>';         // Creazione di un paragrafo di avvertimento utile per informare l'utente che le credenziali inserite sono errate.
                                 }
                             }
 
                             // Caso in cui la query non abbia restituito alcuna riga (ovvero l'email inserita dall'utente non sia stata trovata all'interno del database):
                             else {
                                 // La registrazione viene negata e vengono mostrati un messaggio di errore ed un link alla pagina di registrazione:
-                                echo '<p class = "avvertimenti" style = "margin-top: 380px"> Attenzione: Non sei ancora registrato a questo sito!</p>';         // Creazione di un paragrafo di avvertimento utile per informare l'utente della mancata registrazione.
-                                echo '<a href = "./registration.php" style = "margin-top: 80px; font-size: 25px">Registrati</a>';                               // Creazione di un link alla pagina di registrazione ("registration.php).
+                                $html_out = '<p class = "avvertimenti" style = "font-size: 25px; padding-top: 10px"> Attenzione: Non sei ancora registrato a questo sito!</p><br><br><br>';     // Creazione di un paragrafo di avvertimento utile per informare l'utente della mancata registrazione.
+                                $html_out .= '<a href = "./registration.php" style = "font-size: 25px">Registrati</a>';                                                                         // Creazione di un link alla pagina di registrazione ("registration.php).
+                                echo $html_out;                                                                                                                                                 // Inserimento nella pagina degli elementi html opportunamente preparati e formattati.
                             }
                         }
 

@@ -22,6 +22,29 @@
 
         <article id = "dashboardArticle">
 
+            <?php
+
+                include "connection.php";       // Importazione del file "connection.php" utile per permettere la connessione al database.
+                session_start();                // Apertura della sessione PHP.
+
+                // Controllo di sessione: le istruzioni contenute all'interno di queste parentesi graffe verranno eseguite solamente nel caso in cui la variabile di sessione "loggedin" sia stata settata e contenga il valore booleano true:
+                if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
+                    $statement = $connection->prepare("SELECT Email, Nome, Cognome, Telefono, Città, Via, Nascita FROM Utenti WHERE Email = ?");
+                    $statement->bind_param("s", $_SESSION["session_user_email"]);       // Bind del parametro (ovvero l'indirizzo email dell'utente, recuperato dalla variabile di sessione "session_user_login" settata al momento del login dell'utente) per evitare attacchi di tipo "SQL Injection".
+                    $statement->execute();              // Esecuzione vera e propria della query.
+                    $statement->store_result();         // Salvataggio del risultato ottenuto dall'esecuzione della query.
+                    $statement->bind_result($userEmail, $userName, $userSurname, $userTelephone, $userCity, $userStreet, $userBirthDate);       // Bind dei parametri (ovvero indirizzo email, nome, cognome, numero di telefono, città di nascita, via di residenza e data di nascita dell'utente che ha effettuato il login) per evitare attacchi di tipo "SQL Injection".
+                    $statement->fetch();                // Estrapolazione dei risultati e assegnazione di essi alle variabili appena specificate per il bind del risultato.
+                    $statement->close();                // Chiusura e deallocazione dello statement.
+                }
+
+                // Caso in cui l'utente non ha precedentemente eseguito l'accesso attraverso la pagina di login ("login.php").
+                else {
+                    header('Location: login.php');      // Reindirizzamento alla pagina di login ("login.php").
+                }
+
+            ?>
+
             <script>
 
                 hideAll();      // Invocazione della funzione Javascript "hideAll", utile per nascondere tutti gli elementi attualmente visibili nella pagina in modo tale da consentire la corretta visualizzazione della barra di avanzamento nella schermata di caricamento della pagina.
@@ -60,29 +83,6 @@
                 var progressBarAnimationSetInterval = setInterval(progressBarAnimation, 1000);      // Invocazione periodica (ogni 1000 millisecondi, ovvero ogni secondo) della funzione Javascript "progressBarAnimation", utile per consentire il progressivo avanzamento della barra di caricamento fino al 100% (una volta raggiunta la fine l'animazione della barra di caricamento lascerà il posto alla visualizzazione del contenuto vero e proprio della pagina).
 
             </script>
-
-            <?php
-
-                include "connection.php";       // Importazione del file "connection.php" utile per permettere la connessione al database.
-                session_start();                // Apertura della sessione PHP.
-
-                // Controllo di sessione: le istruzioni contenute all'interno di queste parentesi graffe verranno eseguite solamente nel caso in cui la variabile di sessione "loggedin" sia stata settata e contenga il valore booleano true:
-                if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
-                    $statement = $connection->prepare("SELECT Email, Nome, Cognome, Telefono, Città, Via, Nascita FROM Utenti WHERE Email = ?");
-                    $statement->bind_param("s", $_SESSION["session_user_email"]);       // Bind del parametro (ovvero l'indirizzo email dell'utente, recuperato dalla variabile di sessione "session_user_login" settata al momento del login dell'utente) per evitare attacchi di tipo "SQL Injection".
-                    $statement->execute();              // Esecuzione vera e propria della query.
-                    $statement->store_result();         // Salvataggio del risultato ottenuto dall'esecuzione della query.
-                    $statement->bind_result($userEmail, $userName, $userSurname, $userTelephone, $userCity, $userStreet, $userBirthDate);       // Bind dei parametri (ovvero indirizzo email, nome, cognome, numero di telefono, città di nascita, via di residenza e data di nascita dell'utente che ha effettuato il login) per evitare attacchi di tipo "SQL Injection".
-                    $statement->fetch();                // Estrapolazione dei risultati e assegnazione di essi alle variabili appena specificate per il bind del risultato.
-                    $statement->close();                // Chiusura e deallocazione dello statement.
-                }
-
-                // Caso in cui l'utente non ha precedentemente eseguito l'accesso attraverso la pagina di login ("login.php").
-                else {
-                    header('Location: login.php');      // Reindirizzamento alla pagina di login ("login.php").
-                }
-                
-            ?>
 
             <h1 style = "font-size: 60px; padding-top: 15px; color: #ffffff">Benvenuto nella tua area riservata, <?php echo $userName ?>!</h1>
 

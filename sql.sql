@@ -1,7 +1,7 @@
--- Creazione del database "TennisWebsite":
+-- Creazione del database "Tennis":
 CREATE DATABASE Tennis;
 
--- Utilizzo del database "TennisWebsite" per le successive operazioni:
+-- Utilizzo del database "Tennis" per le successive operazioni:
 USE Tennis;
 
 -- Creazione della tabella "Utenti" (utile per memorizzare le informazioni relative a tutti gli utenti del sito web):
